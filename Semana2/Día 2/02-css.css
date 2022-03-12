@@ -1,6 +1,9 @@
 h1 {
     /* propiedades */
+    /* Mientras mas especifico sea más prioridad va a tener */
     font-family: Impact;
+    /* !importante rompe la especificidad y chanca la propiedad */
+    color: blue !important;
 }
 
 /* selector de clases 
@@ -15,4 +18,13 @@ h1 {
 
 .importante {
     background-color: yellowgreen;
+    font-size: 26px;
 }
+
+#primero {
+    border: 2px solid slateblue;
+    /* width: 300px; */
+    width: 50%;
+}
+
+/* usualmente, para CSS se utilizas Clases y para JS se suele utilizar ID's */
