@@ -2,3 +2,17 @@ h1 {
     /* propiedades */
     font-family: Impact;
 }
+
+/* selector de clases 
+	-diferentes elementos SI pueden compartir las clases
+	-Un elemento puede tener varias clases y las propiedades se combinarian
+*/
+.parrafo {
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.importante {
+    background-color: yellowgreen;
+}
