@@ -14,10 +14,21 @@
                 <!-- form: sirve como envoltura para los elementos input-->
                 <form>
                     <label for="nombres">Nombres:</label>
-                    <input type="text" placeholder="Ingresa tus nombres" id="nombres">
+                    <input 
+						type="text" 
+						placeholder="Ingresa tus nombres" 
+						id="nombres"
+						required
+						minlength="2"
+						maxlength="10"
+					>
                     <br>
                     <label>Apellidos:</label>
-                    <input type="text" placeholder="Ingrese sus apellidos">
+                    <input 
+						type="text" 
+						placeholder="Ingrese sus apellidos"
+						required
+					>
 					<br>
 					<label>email:</label>
 					<input 
