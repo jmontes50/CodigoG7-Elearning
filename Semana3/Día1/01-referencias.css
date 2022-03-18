@@ -13,3 +13,13 @@ ul > li {
 .heading h1 {
     background-color: aquamarine;
 }
+
+/* esta afectando a todos los p hijos en cualquier nivel */
+.textos p {
+    color: blueviolet;
+}
+
+/* esta afectando a solamente los p hijos en un primer nivel */
+.textos > p {
+    background-color: chocolate;
+}
