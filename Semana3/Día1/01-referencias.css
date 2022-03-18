@@ -1,0 +1,15 @@
+/* cuando utilizo el símbolo > estoy haciendo referencia a los primeros hijos*/
+
+ol > li {
+    color: purple;
+}
+
+ul > li {
+    color: orangered;
+}
+
+/* todos los elementos que esten dentro a cualquier nivel van a ocupar estas propiedades */
+
+.heading h1 {
+    background-color: aquamarine;
+}
