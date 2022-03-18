@@ -23,3 +23,19 @@ ul > li {
 .textos > p {
     background-color: chocolate;
 }
+
+/* PSEUDOCLASES */
+/* los tr que esten dentro de tbody que sean impares  */
+/* odd = impares, even = pares */
+tbody tr:nth-of-type(odd) {
+    background-color: lightgray;
+}
+
+tbody tr:nth-of-type(even) {
+    background: gray;
+}
+
+tbody tr:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
