@@ -1,0 +1,40 @@
+/* selecttor especial asterisco */
+* {
+    /* a todos los elementos */
+    border: 1px dotted red;
+}
+
+html {
+    /* font-size: 10px; */
+    /* valor por defecto del font-size del html es 16px */
+}
+
+header {
+    /* width: 300px; */
+    height: 200px;
+    max-width: 300px;
+}
+
+h1 {
+    color: red;
+    /* cuando utilizamos porcentajes% utilizará de referencia el contenedor padre */
+    width: 50%;
+}
+
+p {
+    /* rem, hace referencia al contenedor más lejano */
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+section {
+    font-size: 50px;
+    width: 350px;
+}
+/* em, hace referencia al contenedor más cercano padre */
+h3 {
+    font-size: 0.5em;
+    padding: 1rem;
+}
+
+/* COLORES */
