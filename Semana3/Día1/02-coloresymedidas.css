@@ -38,3 +38,20 @@ h3 {
 }
 
 /* COLORES */
+
+h2 {
+    /* hexadecimal */
+    /* color:#RRGGBB; */
+    /* menor 0 ----> F mayor*/
+    /* color: #ff0000; */
+    /* color: #00ff00; */
+    /* color: #0000ff; */
+    color: #ff55ff;
+}
+
+h3 {
+    /* 0 - 255 */
+    /* color: rgb(45, 200, 141); */
+    /* color: rgba(r, g, b, alpha[0 a 1]); */
+    color: rgba(45, 200, 141, 0.5);
+}
