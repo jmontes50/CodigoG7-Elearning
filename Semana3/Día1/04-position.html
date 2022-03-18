@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <style>
+            /* css */
+			*{
+				margin:0;
+				padding:0;
+				box-sizing: border-box;
+			}
+			.papa{
+				width:500px;
+				height:1400px;
+				border:1px solid green;
+				margin-top:40px;
+				margin-left:80px;
+				position:relative;
+
+			}
+			.hijo{
+				width:100px;
+				height:100px;
+				margin:5px;
+				border:1px solid blue;
+			}
+			.caja2{
+				background:palegreen;
+				/* es que al elemento que se le aplica, es como si no existiera para los demas elementos */
+				position:absolute;
+				/* top, left, right, bottom */
+				top:50px;
+				left:100px;
+				z-index:1;
+			}
+			.caja3{
+				background: yellow;
+				position:fixed;
+				bottom:50px;
+				/* bottom:0; */
+				right:60px;
+			}
+			.caja4{
+				background:steelblue;
+				/* menús de navegacion */
+				position:sticky;
+				top:0;
+				/* bottom:0 */
+			}
+			/*  */
+			.nieto1{
+				background: purple;
+				color:white;
+				position: absolute;
+				top:100px;
+				left:150px;
+				z-index:10;
+			}
+
+			.papa2{
+				/* position:relative; */
+				border:1px solid orangered;
+			}
+        </style>
+    </head>
+    <body>
+        <main class="papa">
+			<!-- quiero 4 div clases .hijo .caja$ ese $=>1,2,3,4 contenido{cajita} -->
+			<!-- div*4.hijo.caja${cajita} -->
+            <div class="hijo caja1">cajita</div>
+            <div class="hijo caja2">cajita</div>
+            <div class="hijo caja3">cajita</div>
+            <div class="hijo caja4">cajita</div>
+			<!--  -->
+			<div class="papa2">
+				<div class="hijo nieto1">
+					nieto
+				</div>
+			</div>
+        </main>
+    </body>
+</html>
