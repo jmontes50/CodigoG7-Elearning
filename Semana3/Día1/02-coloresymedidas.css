@@ -55,3 +55,11 @@ h3 {
     /* color: rgba(r, g, b, alpha[0 a 1]); */
     color: rgba(45, 200, 141, 0.5);
 }
+
+/* hue, saturation, lightness */
+/* matiz, saturacion, iluminación */
+/* grados, porcentaje, porcentaje */
+
+p {
+    background-color: hsl(90, 90%, 30%);
+}
