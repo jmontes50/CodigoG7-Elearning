@@ -4,6 +4,10 @@ ol > li {
     color: purple;
 }
 
+#importante {
+    color: green;
+}
+
 ul > li {
     color: orangered;
 }
