@@ -26,6 +26,23 @@
     margin: 0 auto;
 }
 
+/* section lenguajes */
+.lenguajes {
+    display: flex;
+}
+
+.lenguajes-texto {
+    padding: 30px;
+}
+
+.lenguajes-texto * {
+    margin-top: 20px;
+}
+
+.pc {
+    max-width: 500px;
+}
+
 /* footer */
 footer {
     min-height: 250px;
