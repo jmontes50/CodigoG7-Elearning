@@ -10,8 +10,13 @@
 .menu {
     height: 450px;
     background-color: aquamarine;
+    /* flex */
+    display: flex;
+    /* horizontal */
+    /* space-around, space-between, space-evenly */
+    justify-content: space-evenly;
 }
-
+/* hijos */
 .link {
     background: steelblue;
     color: white;
