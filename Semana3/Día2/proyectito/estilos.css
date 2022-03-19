@@ -26,6 +26,26 @@
     margin: 0 auto;
 }
 
+section {
+    margin-bottom: 120px;
+}
+
+button {
+    border: 0;
+    /* redondeado del borde */
+    border-radius: 20px;
+    padding: 10px 25px;
+    color: white;
+    background-color: var(--color1);
+}
+
+button:hover {
+    background-color: var(--color2);
+    /* font.weight: grosor de la fuente */
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /* section lenguajes */
 .lenguajes {
     display: flex;
