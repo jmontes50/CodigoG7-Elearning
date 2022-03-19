@@ -17,6 +17,15 @@
     /* color: var(--color1); */
 }
 
+/* generales */
+.contenedor {
+    max-width: 1000px;
+    /* margin y para padding */
+    /* margin: arribaYabajo(0) derechaEizquierda(auto) */
+    /* auto = navegador encargate */
+    margin: 0 auto;
+}
+
 /* footer */
 footer {
     min-height: 250px;
