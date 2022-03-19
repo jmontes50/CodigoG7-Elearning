@@ -12,9 +12,17 @@
     background-color: aquamarine;
     /* flex */
     display: flex;
+    /* direction, row, column, reverse */
+    flex-direction: row;
     /* horizontal */
-    /* space-around, space-between, space-evenly */
+    /* space-around, space-between, space-evenly
+	center */
     justify-content: space-evenly;
+    /* vertical */
+    /* center, flex-end*/
+    align-items: center;
+
+    /* flex-wrap: wrap; */
 }
 /* hijos */
 .link {
@@ -22,4 +30,30 @@
     color: white;
     height: 50px;
     width: 100px;
+}
+
+/* grow - shrink, SI SE APLICAN A LOS ELEMENTOS HIJOS */
+/* :nth-of-type(n) n = numero */
+/* grow = crecer, en base al espacio libre */
+.link:nth-of-type(3) {
+    background-color: crimson;
+    /* flex-grow: 4; */
+}
+
+.link:nth-of-type(5) {
+    background-color: purple;
+    /* flex-grow: 1; */
+}
+
+/* shrink-encoger */
+/* asume el espacio faltante y hace que los elementos se encojan más según el valor de flex-shrink */
+.link:nth-of-type(2) {
+    background-color: yellow;
+    color: black;
+    flex-shrink: 8;
+}
+
+.link:nth-of-type(6) {
+    background-color: #000000;
+    flex-shrink: 4;
 }
