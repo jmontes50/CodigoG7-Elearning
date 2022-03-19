@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* css */
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		main{
+			/* como una unidad relativa, % */
+			height:50vh;
+			width:100vw;
+			border:3px solid red;
+		}
+		/* , = Y */
+		/* los elem. con clase titulares Y clase noticia, van a tener el borde azul */
+		.titulares, .noticia{
+			border:2px solid blue;
+		}
+
+		.titulares{
+			display: flex;
+			justify-content: space-between;
+		}
+
+		/* @media dispositivo and (condicional:breakpoint){} */
+		@media screen and (max-width:768px){
+			h1{
+				background-color:red;
+			}
+			.titulares{
+				flex-direction: column;
+			}
+		}
+
+		@media screen and (max-width:576px){
+			h1{
+				background-color:steelblue;
+			}
+			p{
+				font-size:24px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Título</h1>
+	</header>
+	<main>
+		<section class="titulares">
+			<div class="noticia">
+				<p>Lorem ipsum dolor sit amet.</p>
+			</div>
+			<div class="noticia">
+				<p>Lorem ipsum dolor sit amet.</p>
+			</div>
+			<div class="noticia">
+				<p>Lorem ipsum dolor sit amet.</p>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

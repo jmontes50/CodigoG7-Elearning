@@ -31,7 +31,6 @@
     height: 50px;
     width: 100px;
 }
-
 /* grow - shrink, SI SE APLICAN A LOS ELEMENTOS HIJOS */
 /* :nth-of-type(n) n = numero */
 /* grow = crecer, en base al espacio libre */
@@ -39,12 +38,10 @@
     background-color: crimson;
     /* flex-grow: 4; */
 }
-
 .link:nth-of-type(5) {
     background-color: purple;
     /* flex-grow: 1; */
 }
-
 /* shrink-encoger */
 /* asume el espacio faltante y hace que los elementos se encojan más según el valor de flex-shrink */
 .link:nth-of-type(2) {
