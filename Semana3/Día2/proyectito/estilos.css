@@ -46,6 +46,31 @@ button:hover {
     cursor: pointer;
 }
 
+/* section conócenos */
+
+.conocenos {
+    text-align: center;
+}
+
+.conocenos h2 {
+    margin: 20px;
+}
+
+.caracteristicas {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.tarjeta {
+    width: 25%;
+}
+
+.tarjeta p {
+    padding: 10px;
+}
+
 /* section lenguajes */
 .lenguajes {
     display: flex;
