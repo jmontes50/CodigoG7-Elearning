@@ -11,7 +11,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial;
+    /* si no encuentra una fuente usará la siguiente */
+    font-family: "Open Sans", Arial, sans-serif;
     /* temporal */
     /* border: 1px solid red; */
     /* color: var(--color1); */
@@ -199,4 +200,7 @@ footer .contenedor {
 
 .card-footer h3 {
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 578px) {
 }
