@@ -203,4 +203,51 @@ footer .contenedor {
 }
 
 @media screen and (max-width: 578px) {
+    header {
+        max-height: 70%;
+    }
+
+    .contenido-header {
+        padding: 40px;
+    }
+
+    .caracteristicas {
+        flex-direction: column;
+    }
+
+    .tarjeta {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .tarjeta h5 {
+        /* tamaños de letra responsive */
+        /* calc() me permite hacer operaciones */
+        /* calc(tamaño_minimo + una porción del ancho" */
+        font-size: calc(12px + 1.25vw);
+    }
+
+    #video-youtube {
+        width: 100vw;
+    }
+
+    .lenguajes {
+        flex-direction: column;
+    }
+
+    .lenguajes-imagen {
+        text-align: center;
+    }
+
+    .pc {
+        width: 90%;
+    }
+
+    footer .contenedor {
+        flex-direction: column;
+    }
+
+    .card-footer {
+        width: 100%;
+    }
 }
