@@ -89,6 +89,21 @@ a {
 .onda {
     position: absolute;
     bottom: 0;
+    z-index: 19;
+}
+
+.filtro-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* gradiente */
+    /* background-image: linear-gradient(degrees, colores...) */
+    background-image: linear-gradient(45deg, var(--color1), var(--color2));
+    /* opacidad, que tan transparente va a ser */
+    opacity: 0.5;
+    z-index: 9;
 }
 
 .contenedor {
