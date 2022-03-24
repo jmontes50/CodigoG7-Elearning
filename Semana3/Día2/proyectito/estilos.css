@@ -13,7 +13,7 @@
     box-sizing: border-box;
     font-family: Arial;
     /* temporal */
-    border: 1px solid #ddd;
+    border: 1px solid red;
     /* color: var(--color1); */
 }
 
