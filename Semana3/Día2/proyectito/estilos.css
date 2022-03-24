@@ -37,6 +37,8 @@ header {
 .menu-principal {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 39;
 }
 
 /* generales */
@@ -79,6 +81,8 @@ a {
 .contenido-header {
     padding: 100px;
     text-align: center;
+    position: relative;
+    z-index: 29;
 }
 
 /* del elem, con las clase contenido-header, de sus hijos en un primer nivel, * = los quiero todos */
