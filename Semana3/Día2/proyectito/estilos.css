@@ -13,7 +13,7 @@
     box-sizing: border-box;
     font-family: Arial;
     /* temporal */
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* color: var(--color1); */
 }
 
@@ -30,6 +30,8 @@ header {
     background-position: center;
     background-size: cover;
     color: white;
+    position: relative;
+    min-height: 85vh;
 }
 
 .menu-principal {
@@ -82,6 +84,11 @@ a {
 /* del elem, con las clase contenido-header, de sus hijos en un primer nivel, * = los quiero todos */
 .contenido-header > * {
     margin-bottom: 20px;
+}
+
+.onda {
+    position: absolute;
+    bottom: 0;
 }
 
 .contenedor {
