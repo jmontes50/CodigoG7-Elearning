@@ -38,7 +38,8 @@ header {
 .menu-principal {
     display: flex;
     justify-content: space-between;
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 39;
 }
 
@@ -179,6 +180,25 @@ button:hover {
 
 .pc {
     max-width: 500px;
+}
+
+/* formulario */
+.registro {
+    padding: 40px;
+}
+
+.registro input {
+    padding: 10px 20px;
+    border-radius: 30px;
+    width: 80%;
+}
+
+.registro button {
+    width: 15%;
+}
+
+.registro > * {
+    margin-bottom: 20px;
 }
 
 /* footer */
