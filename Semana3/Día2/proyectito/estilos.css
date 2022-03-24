@@ -17,7 +17,35 @@
     /* color: var(--color1); */
 }
 
+header {
+    /* background-image: url("ruta_imagen") */
+    /* ordenados en rendimiento
+	 svg
+	webp : transparentes
+	jpg 
+	png : muy grandes no lo recomiendo
+	gif - posible no
+	tiff - no es muy optimo*/
+    background-image: url("./img/header_img.webp");
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.menu-principal {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* generales */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 .contenedor {
     max-width: 1000px;
     /* margin y para padding */
