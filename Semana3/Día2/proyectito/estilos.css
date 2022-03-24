@@ -74,6 +74,16 @@ a {
     margin-left: 15px;
 }
 
+.contenido-header {
+    padding: 100px;
+    text-align: center;
+}
+
+/* del elem, con las clase contenido-header, de sus hijos en un primer nivel, * = los quiero todos */
+.contenido-header > * {
+    margin-bottom: 20px;
+}
+
 .contenedor {
     max-width: 1000px;
     /* margin y para padding */
