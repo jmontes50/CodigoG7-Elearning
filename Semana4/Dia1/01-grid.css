@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    border: 2px solid red;
+    height: 100vh;
+    display: grid;
+    /* grid-template-columns: tamaño X veces, y esas X veces se generaran X columnas */
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 250px 250px 250px;
+}
+
+.item {
+    border: 2px solid blue;
+}
