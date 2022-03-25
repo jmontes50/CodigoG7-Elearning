@@ -9,7 +9,13 @@
     height: 100vh;
     display: grid;
     /* grid-template-columns: tamaño X veces, y esas X veces se generaran X columnas */
-    grid-template-columns: 250px 250px 250px;
+    /* columnas */
+    /* fr = free space  = fractions*/
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* repeat: (Cantidad, un tamaño) */
+    grid-template-columns: repeat(4, 150px);
+
+    /* filas */
     grid-template-rows: 250px 250px 250px;
 }
 
