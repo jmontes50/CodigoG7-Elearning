@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			box-sizing: border-box;
+			padding:10px;
+			border:2px solid blue;
+		}
+
+		.contenedor{
+			display:grid;
+			grid-template-areas: 
+				"cabecera cabecera cabecera"
+				"principal principal publicidad"
+				"pie pie pie";
+		}
+
+		header{
+			grid-area: cabecera;
+			background-color:red;
+		}
+
+		main{
+			grid-area:principal;
+			background:blue;
+			color:white;
+		}
+		aside{
+			grid-area:publicidad;
+			background-color:green
+		}
+		footer{
+			grid-area:pie;
+			background-color: orange;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="contenedor">
+		<header>
+			<h1>Header</h1>
+		</header>
+		<main>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, facere quos laudantium fuga quis voluptate itaque beatae, quae doloremque fugiat nisi quod quidem! Cum rem nobis velit debitis inventore aliquid
+			</p>
+		</main>
+		<aside>
+			Lorem ipsum dolor sit amet.
+		</aside>
+		<footer>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, veritatis.
+		</footer>
+	</div>
+</body>
+</html>

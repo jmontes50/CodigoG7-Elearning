@@ -6,7 +6,7 @@
 
 .contenedor {
     border: 2px solid red;
-    /* height: 100vh; */
+    min-height: 100vh;
     display: grid;
     /* GRID EXPLÍCITO */
     /* grid-template-columns: tamaño X veces, y esas X veces se generaran X columnas */
