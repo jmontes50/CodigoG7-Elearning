@@ -1,0 +1,30 @@
+/* estado1 */
+.cajita {
+    width: 250px;
+    height: 250px;
+    border: 2px solid red;
+    background-color: lightseagreen;
+
+    /* propiedades de transición */
+    /* afectar a todo */
+    transition-property: all;
+    /* transition-duration: 1000ms; */
+    transition-duration: 1s;
+    transition-delay: 0.5s;
+    /* acelaración de la transición */
+    transition-timing-function: ease-in-out;
+}
+
+/* estado2 */
+.cajita:hover {
+    background-color: purple;
+    border-radius: 50%;
+    /* transformación */
+    /* valor entero que es porcentual */
+    /* transform: scale(2); */
+    transform: translate(100px, 200px);
+    /* transform: translate3d(500px, 20px, 600px); */
+    /* transform: rotate(180deg); */
+    /* transform: skewY(45deg); */
+    /* transform: skewX(45deg); */
+}
