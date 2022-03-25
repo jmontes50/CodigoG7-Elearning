@@ -28,3 +28,18 @@
     /* transform: skewY(45deg); */
     /* transform: skewX(45deg); */
 }
+
+#imagen {
+    width: 700px;
+    /* opacity: 0 a 1 (porcentual) */
+    opacity: 0.5;
+}
+
+#imagen:hover {
+    opacity: 1;
+    transform: scale(1.02);
+    /* box-shadow ejeX ejeY Tamaño color */
+    box-shadow: 0 0 10px steelblue;
+    transition-property: all;
+    transition-duration: 1s;
+}
