@@ -13,12 +13,28 @@
     /* fr = free space  = fractions*/
     /* grid-template-columns: 1fr 1fr 1fr; */
     /* repeat: (Cantidad, un tamaño) */
-    grid-template-columns: repeat(4, 150px);
+    /* grid-template-columns: repeat(4, 150px); */
+    /* minmax(tam_min,tam_max) */
+    grid-template-columns: repeat(3, minmax(100px, 300px));
 
     /* filas */
-    grid-template-rows: 250px 250px 250px;
+    /* grid-template-rows: 250px 250px 250px; */
+    grid-template-rows: repeat(3, minmax(200px, 400px));
+
+    /* brecha */
+    /* gap: vertical horizontal */
+    gap: 40px 40px;
+
+    /* padding: 40px; */
 }
 
 .item {
     border: 2px solid blue;
+}
+
+.item:nth-of-type(1) {
+    /* grid-: inicio / final */
+    /* según las alineaciones */
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
 }
