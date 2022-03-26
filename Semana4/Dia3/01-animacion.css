@@ -1,0 +1,42 @@
+body {
+    background: lightblue;
+}
+
+.nave {
+    width: 150px;
+
+    animation-name: volar;
+    animation-duration: 10s;
+    /* cambio como se ejecuta */
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes volar {
+    /* es donde vamos a poner nuestros frames */
+    /* selectorkeyframe son valores porcentuales
+	de 0% a 100% */
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(500px, 0);
+    }
+
+    30% {
+        transform: translate(500px, 0) rotate(90deg);
+    }
+
+    50% {
+        transform: translate(500px, 500px) rotate(90deg);
+    }
+
+    63% {
+        transform: translate(500px, 500px) rotate(180deg);
+    }
+
+    75% {
+        transform: translate(0, 500px) rotate(180deg);
+    }
+}
