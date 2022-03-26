@@ -24,6 +24,10 @@
     background-position: center;
     background-size: cover;
     border: 2px solid steelblue;
+    /* tem,poral */
+    color: white;
+    font-size: 60px;
+    text-shadow: 0 0 5px black;
 }
 
 .caja:nth-of-type(1) {
@@ -35,4 +39,28 @@
 .caja:nth-of-type(2) {
     background-image: url("./img/1.jpg");
     grid-column: 3 / 5;
+}
+
+.caja:nth-of-type(3) {
+    background-image: url("./img/2.jpg");
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+
+.caja:nth-of-type(4) {
+    background-image: url("./img/4.jpg");
+    grid-row: 2 / 4;
+    grid-column: 4 / 5;
+}
+
+.caja:nth-of-type(5) {
+    background-image: url("./img/5.jpg");
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+}
+
+.caja:nth-of-type(6) {
+    background-image: url("./img/6.jpg");
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
 }
