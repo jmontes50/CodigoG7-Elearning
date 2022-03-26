@@ -10,6 +10,7 @@ body {
     /* cambio como se ejecuta */
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    animation-direction: reverse;
 }
 
 @keyframes volar {
