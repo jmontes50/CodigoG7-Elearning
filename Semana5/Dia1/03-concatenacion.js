@@ -30,7 +30,11 @@ console.log(`Mascotas : ${cantidadMascotas}`);
 //toda la información que obtenemos del usuario, suele estar en formato string
 console.log(typeof cantidadMascotas);
 
+//enteros
 // let convertido = parseInt(cantidadMascotas);
+//decimales
+// let convertido = parseFloat(cantidadMascotas);
+//se puede convertir facilmente un string a números colocandole un + adelante
 let convertido = +cantidadMascotas;
 
 console.log(convertido);
