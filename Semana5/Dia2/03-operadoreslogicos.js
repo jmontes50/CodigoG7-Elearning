@@ -1,6 +1,9 @@
+/** 
+
 let edad = Number(prompt("Cuál es tu edad?"));
 
 //que según la edad vamos a indicar que chequeos médicos necesitaria una persona
+
 
 if (edad >= 70) {
     console.log("Haz un chequeo general");
@@ -12,4 +15,19 @@ if (edad >= 70) {
     console.log("Visita a un@ infectolog@");
 } else {
     console.log("Anda a un pediatra");
+}
+
+*/
+
+//Negación, anteponiendo a un booleano el simbolo !
+
+let estabasConTusAmigos = true;
+
+console.log(!estabasConTusAmigos);
+
+let numero = 19;
+
+//!== diferente de
+if (numero !== 20) {
+    console.log("No es excelente");
 }
