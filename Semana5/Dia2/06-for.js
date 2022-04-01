@@ -28,7 +28,7 @@ let propina = 0;
 for (ahorro = 5; ahorro <= 3000; ahorro = ahorro + propina) {
     propina = Number(prompt("Ingrese la propina"));
     console.log("PROPINA", propina);
-    console.log("AHORRO", ahorro);
+    console.log("AHORRO", ahorro + propina);
 }
 //CUANDO SE TERMINE DE EJECUTAR EL FOR RECIÉN SE EJECUTARÁ LO QUE ESTÁ DESPUÉS
 console.log("ESTOY DESPUÉS DEL FOR");
