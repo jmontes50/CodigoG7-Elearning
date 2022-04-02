@@ -27,9 +27,13 @@ for (let i = 0; i < 10; i++) {
 let notas = [15, 18, 13, 12, 9, 14, 20, 6, 0, 10];
 
 //sepa que notas son las aprobatorias
+//porque quiero hacer un proceso de matricula
 for (let i = 0; i < notas.length; i++) {
     if (notas[i] < 13) {
         continue;
     }
     console.log(notas[i]);
+    //el alumno esta al dia con sus pagos
+    //tiene creditos suficientes
+    //matricula
 }
