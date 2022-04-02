@@ -28,17 +28,21 @@ do {
         console.log(contCitas);
         if (contCitas >= 1 && contCitas <= 3) {
             costoTotal = costoTotal + 150;
+            console.log(150);
         } else if (contCitas <= 5) {
             costoTotal = costoTotal + 120;
+            console.log(120);
         } else if (contCitas <= 7) {
             costoTotal = costoTotal + 100;
+            console.log(100);
         } else {
             costoTotal = costoTotal + 60;
+            console.log(60);
         }
         // después del if
         contCitas++;
-        console.log(costoTotal);
     } else {
         sano = true;
     }
 } while (sano === false);
+console.log(costoTotal);
