@@ -34,3 +34,21 @@ for (let i = 1; i <= cantidadCitas; i++) {
 }
 
 console.log(`El total a pagar es: ${pagoTotal}`);
+
+/**
+let citas = +prompt("ingrese numero de citas")
+
+let cost = 0
+
+if(citas<=3){
+    cost = citas*150
+}else if(citas <= 5){
+    cost = 450 + (citas-3)*120
+}else if(citas <= 7){
+    cost = 450 + 240 + (citas-5)*100
+}else{
+    cost = 450 + 240 + 200 + (citas-7)*60
+}
+
+console.log(cost)
+ */
