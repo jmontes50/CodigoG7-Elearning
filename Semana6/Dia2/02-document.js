@@ -83,3 +83,35 @@ imagen.setAttribute("alt", "recordatorio de nomenclatura en variables")
 imagen.style.width = "400px"
 
 divContenido.appendChild(imagen)
+
+let seleccion = [
+    "Cuevita",
+    "Lapagol",
+    "Oreja",
+    "Carrillo",
+    "El cóndor Mendoza",
+    "San Gallese"
+]
+
+seleccion.forEach(function(player){
+    console.log("mostrando player:", player)
+    //creo un elemento párrafo p
+    let pJugador = document.createElement("p")
+    //le rellenamos el HTML con el nombre del jugador
+    pJugador.innerHTML = player
+    console.log(pJugador)
+    //lo agregamos como hijo de divContenido
+    divContenido.appendChild(pJugador)
+})
+
+console.log(divContenido)
+
+let p5 = document.querySelector("#contenido > p:nth-of-type(5)");
+
+console.log("P5",p5)
+
+let entrenador = document.createElement("p")
+
+entrenador.innerHTML = "Gareca";
+
+divContenido.insertAdjacentElement('afterend', p5)
