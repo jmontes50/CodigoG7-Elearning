@@ -46,3 +46,40 @@ seriesTV.forEach(function(serie){
         alert(`Has escogido ${serie}`)
     })
 })
+
+let input = document.createElement("input")
+//input.setAttribute("nombre_attr","valor_attr")
+input.setAttribute("type","password")
+divContenido.appendChild(input)
+
+let btnVer = document.createElement("button")
+btnVer.innerHTML = "mostrar password"
+divContenido.appendChild(btnVer)
+
+//flag - bandera
+let esVisible = false;
+
+btnVer.addEventListener("click", function(){
+    //si te dijeron que era yo, yo no fui
+    //negación NOT
+    esVisible = !esVisible;
+
+    if(esVisible === true){
+        input.setAttribute("type","text")
+    }else{
+        input.setAttribute("type","password")
+    }
+})
+
+let linkGoogle = document.createElement("a")
+linkGoogle.innerHTML = "Vamo a google"
+linkGoogle.setAttribute("href","https://google.com")
+linkGoogle.setAttribute("target","_blank")
+divContenido.appendChild(linkGoogle)
+
+linkGoogle.addEventListener("click",function(evento){
+    console.log(evento)
+    //preventDefault(), previene la acción por defecto a ejecutar de un elemento
+    evento.preventDefault()
+    console.log("click!")
+})
