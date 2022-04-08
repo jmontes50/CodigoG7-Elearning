@@ -17,3 +17,23 @@ titulo.style.padding = "20px";
 titulo.style.backgroundColor= "blue";
 titulo.style.borderRadius = "10px";
 titulo.style.textAlign = "center";
+
+//Selector de CSS
+let subtitulo  = document.querySelector(".subtitulo");
+
+console.log(subtitulo);
+
+subtitulo.style.border = "4px solid #4c4c4c";
+
+let main  = document.querySelector("main");
+
+main.style.backgroundColor = "lightblue";
+
+let listaItems = document.querySelectorAll(".li_item");
+
+console.log(listaItems);
+
+listaItems.forEach(function(liItem){
+    liItem.style.fontFamily = "Arial";
+    liItem.style.color = "purple"
+})
