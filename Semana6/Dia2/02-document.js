@@ -66,3 +66,20 @@ divAlerta.innerHTML = "El Repechaje es el 13 de Junio";
 divContenido.appendChild(divAlerta)
 
 divAlerta.style.color = "red";
+
+let preguntar = confirm("Deseas apoyar a la selección")
+
+if(preguntar === true){
+    let divApoyo = document.createElement("div")
+    divApoyo.innerHTML = "Vamoooos Perú!!!!"
+    divContenido.appendChild(divApoyo)
+}
+
+let imagen = document.createElement("img");
+
+//setAtribute("nombre_attr","valor_attr")
+imagen.setAttribute("src", "https://pbs.twimg.com/media/EvgxLWgXUAYzZlB.jpg")
+imagen.setAttribute("alt", "recordatorio de nomenclatura en variables")
+imagen.style.width = "400px"
+
+divContenido.appendChild(imagen)
