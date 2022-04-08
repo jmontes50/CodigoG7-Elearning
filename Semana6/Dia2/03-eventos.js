@@ -19,7 +19,7 @@ caja.addEventListener("mouseover", function(){
     console.log("Pasaste por encima")
 })
 
-let series = [
+let seriesTV = [
     "La casa de papel",
     "Mr. Robot",
     "Demon Slayer",
@@ -35,4 +35,14 @@ let series = [
     "El código de la discordia"
 ]
 
-series.forEach()
+seriesTV.forEach(function(serie){
+    let nuevoParrafo = document.createElement("p")
+    console.log(serie)
+    nuevoParrafo.innerHTML = serie
+    divContenido.appendChild(nuevoParrafo)
+
+    //aparte de agregar nuevoParrafo al DOM, le añadimos un listener que escuche si al elemento se le ha hecho doble click
+    nuevoParrafo.addEventListener("dblclick", function(){
+        alert(`Has escogido ${serie}`)
+    })
+})
