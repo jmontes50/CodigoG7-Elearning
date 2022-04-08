@@ -15,3 +15,24 @@ caja.style.border = "2px solid orangered"
 
 divContenido.appendChild(caja)
 
+caja.addEventListener("mouseover", function(){
+    console.log("Pasaste por encima")
+})
+
+let series = [
+    "La casa de papel",
+    "Mr. Robot",
+    "Demon Slayer",
+    "The office",
+    "Grey's Anatomy",
+    "Breaking Bad",
+    "GOT",
+    "Euphoria",
+    "Killing Eve",
+    "Prison Break",
+    "Halo",
+    "MoonKnight",
+    "El código de la discordia"
+]
+
+series.forEach()
