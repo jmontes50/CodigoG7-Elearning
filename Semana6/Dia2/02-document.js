@@ -37,3 +37,32 @@ listaItems.forEach(function(liItem){
     liItem.style.fontFamily = "Arial";
     liItem.style.color = "purple"
 })
+
+let divContenido = document.getElementById("contenido")
+
+// si llamamos a un elemento antes de que exista, no lo va a encontrar
+// let miParrafo = document.getElementById("parrafo")
+
+// console.log(miParrafo)
+
+//el backtick me permite poner comillas dentro
+divContenido.innerHTML = `<p id="parrafo">
+                                Arriba Perú
+                            </p>
+                            <div>
+                                Segundo Párrafo
+                            </div>`;
+
+//document.createElement("elem")
+//elem => p , div , h1
+//Me permite crear un elemento(obj) sin agregar al HTML
+let divAlerta = document.createElement("div")
+
+console.log(divAlerta);
+
+divAlerta.innerHTML = "El Repechaje es el 13 de Junio";
+
+//añade un elemento como hijo de otro elemento
+divContenido.appendChild(divAlerta)
+
+divAlerta.style.color = "red";
