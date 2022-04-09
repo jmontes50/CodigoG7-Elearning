@@ -78,7 +78,7 @@ function dibujarTarjetas () {
                 <p>${plato.descripcion}</p>
                 <div class="precio">
                     <span>S/ ${plato.precio}</span>
-                    <button class="btn-agregar">
+                    <button class="btn-agregar" data-id="${plato.id}">
                         Agregar
                     </button>
                 </div>
@@ -87,5 +87,17 @@ function dibujarTarjetas () {
     })
 
     divContenido.innerHTML = htmlTarjetas;
+
+    let btnsAgregar = document.querySelectorAll(".btn-agregar");
+
+    btnsAgregar.forEach(function(boton){
+        boton.addEventListener("click",function(){
+            //.getAttribute("nombre_attr") darme el valor de un atributo
+            let idObtenido = boton.getAttribute("data-id");
+            console.log(idObtenido);
+        })
+    })
+
+
 }
 dibujarTarjetas()
