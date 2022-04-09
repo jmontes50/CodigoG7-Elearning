@@ -20,7 +20,7 @@ function agregarTarea (tarea) {
     guardarEnLS()
 }
 
-function guardarEnLS (){
+function guardarEnLS () {
     /** 
      * 
      * //localStorage solamente guarda texto
@@ -30,6 +30,17 @@ function guardarEnLS (){
     console.log(fechaConvertida)
     */
     let porHacerConvertido = JSON.stringify(porHacer)
-    console.log(porHacerConvertido)
+    // console.log(porHacerConvertido)
     localStorage.setItem("tareasPorHacer", porHacerConvertido)
 }
+
+function leerLS () {
+    //localStorage.getItem("nombre_de_lo_guardado")
+    let tareasDelLS = localStorage.getItem("tareasPorHacer")
+    // console.log(tareasDelLS)
+    //JSON.parse(string)
+    //convierte de texto a JS
+    let porHacerReConvertido = JSON.parse(tareasDelLS)
+    console.log(porHacerReConvertido)
+}
+leerLS()
