@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- font awesome de cdnjs -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <!-- google-fonts Open Sans -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- mis estilos -->
+    <link rel="stylesheet" href="./css/estilo.css" />
+  </head>
+  <body>
+    <div class="raiz">
+      <nav>
+        <h1>CodiResto</h1>
+      </nav>
+      <div class="principal">
+        <nav class="menu">
+          <ul>
+            <li>Platos Principales</li>
+            <li>Bebidas</li>
+          </ul>
+        </nav>
+        <main id="contenido">
+          <!-- tarjeta -->
+          <div class="tarjeta">
+            <div class="imagen">
+              <img
+                src="http://www.thepinkwhisk.co.uk/wp-content/uploads/2015/12/DSC06741.jpg"
+              />
+            </div>
+            <div class="texto">
+              <h4>Pingüino de chocolate</h4>
+              <p>A que se ven deliciosos no?</p>
+              <div class="precio">
+                <span>S/ 25</span>
+                <button class="btn-agregar">Agregar</button>
+              </div>
+            </div>
+          </div>
+          <!-- tarjeta -->
+          <div class="tarjeta">
+            <div class="imagen">
+              <img
+                src="http://www.thepinkwhisk.co.uk/wp-content/uploads/2015/12/DSC06741.jpg"
+              />
+            </div>
+            <div class="texto">
+              <h4>Pingüino de chocolate</h4>
+              <p>A que se ven deliciosos no?</p>
+              <div class="precio">
+                <span>S/ 25</span>
+                <button class="btn-agregar">Agregar</button>
+              </div>
+            </div>
+          </div>
+          <!-- tarjeta -->
+          <div class="tarjeta">
+            <div class="imagen">
+              <img
+                src="http://www.thepinkwhisk.co.uk/wp-content/uploads/2015/12/DSC06741.jpg"
+              />
+            </div>
+            <div class="texto">
+              <h4>Pingüino de chocolate</h4>
+              <p>A que se ven deliciosos no?</p>
+              <div class="precio">
+                <span>S/ 25</span>
+                <button class="btn-agregar">Agregar</button>
+              </div>
+            </div>
+          </div>
+          <!-- tarjeta -->
+          <div class="tarjeta">
+            <div class="imagen">
+              <img
+                src="http://www.thepinkwhisk.co.uk/wp-content/uploads/2015/12/DSC06741.jpg"
+              />
+            </div>
+            <div class="texto">
+              <h4>Pingüino de chocolate</h4>
+              <p>A que se ven deliciosos no?</p>
+              <div class="precio">
+                <span>S/ 25</span>
+                <button class="btn-agregar">Agregar</button>
+              </div>
+            </div>
+          </div>
+          <!-- tarjeta -->
+          <div class="tarjeta">
+            <div class="imagen">
+              <img
+                src="http://www.thepinkwhisk.co.uk/wp-content/uploads/2015/12/DSC06741.jpg"
+              />
+            </div>
+            <div class="texto">
+              <h4>Pingüino de chocolate</h4>
+              <p>A que se ven deliciosos no?</p>
+              <div class="precio">
+                <span>S/ 25</span>
+                <button class="btn-agregar">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="carrito">
+      <p id="fecha"></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Cantidad</th>
+            <th>P.U.</th>
+            <th>P.T.</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-carrito">
+          <tr>
+            <td>Pingüinito</td>
+            <td>5</td>
+            <td>12</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>Pingüinito</td>
+            <td>5</td>
+            <td>12</td>
+            <td>60</td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <div class="resumen">
+        <table>
+          <tbody id="tbody-resumen">
+            <tr>
+              <td>TOTAL</td>
+              <td>60</td>
+            </tr>
+          </tbody>
+          
+        </table>
+        <button id="btn-pagar">PAGAR ORDEN</button>
+      </div>
+    </div>
+  </body>
+</html>
