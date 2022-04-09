@@ -64,6 +64,8 @@ let listaPlatillos = [
 
 let divContenido = document.getElementById("contenido");
 
+let carrito = []
+
 function dibujarTarjetas () {
     let htmlTarjetas = "";
 
@@ -93,11 +95,19 @@ function dibujarTarjetas () {
     btnsAgregar.forEach(function(boton){
         boton.addEventListener("click",function(){
             //.getAttribute("nombre_attr") darme el valor de un atributo
-            let idObtenido = boton.getAttribute("data-id");
-            console.log(idObtenido);
+            let idObtenido = boton.getAttribute("data-id"); //string
+            // console.log(idObtenido);
+            let platoObtenido = buscarPlatoPorId(+idObtenido)
+            carrito.push(platoObtenido)
         })
     })
-
-
 }
 dibujarTarjetas()
+
+function buscarPlatoPorId (id) {
+    let platoEncontrado = listaPlatillos.find(function(plato){
+        return plato.id === id
+    })
+    // console.log(platoEncontrado)
+    return platoEncontrado;
+}
