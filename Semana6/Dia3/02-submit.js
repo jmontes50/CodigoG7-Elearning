@@ -41,6 +41,10 @@ function leerLS () {
     //JSON.parse(string)
     //convierte de texto a JS
     let porHacerReConvertido = JSON.parse(tareasDelLS)
-    console.log(porHacerReConvertido)
+    porHacerReConvertido.forEach(function(tarea){
+        agregarTarea(tarea)
+    })
+
 }
+//fuera de todo, inmediatamente
 leerLS()
