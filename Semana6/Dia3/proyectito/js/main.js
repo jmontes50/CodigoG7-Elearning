@@ -71,13 +71,13 @@ function dibujarTarjetas () {
         htmlTarjetas = htmlTarjetas + 
         `<div class="tarjeta">
             <div class="imagen">
-                <img src="https://picsum.photos/400">
+                <img src="${plato.imagen}">
             </div>
             <div class="texto">
-                <h4>Ceviche</h4>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <h4>${plato.nombre}</h4>
+                <p>${plato.descripcion}</p>
                 <div class="precio">
-                    <span>S/ 30</span>
+                    <span>S/ ${plato.precio}</span>
                     <button class="btn-agregar">
                         Agregar
                     </button>
