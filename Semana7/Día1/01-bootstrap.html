@@ -30,6 +30,7 @@
         <h2>Columnas</h2>
         <!-- grid bootstrap -->
         <div class="row">
+            <!-- col que segun la cant. de col que haya se van dividiendo el espacio equitativamente -->
             <div class="col oscuro">
                 1ra columna
             </div>
@@ -40,6 +41,32 @@
                 3ra columna
             </div>
         </div>
+        <hr>
+        <h2>Columnas definidas</h2>
+        <!-- necesitamos el row -->
+        <div class="row">
+            <div class="col-8 claro">
+                Columna de 8
+            </div>
+            <div class="col-4 oscuro">
+                Columna de 4
+            </div>
+            <!-- Si el ancho de las columnas no suma 12, la que sobresalga va a colapsar,
+            colapsar: se va a disponer después de los otros elementos en la parte inferior -->
+        </div>
+        <hr>
+        <h2>Columnas Responsive</h2>
+        <h3><code>col-xl-#</code></h3>
+        <h5>xl -> las columnas colapsan si el ancho disponible es menor a 1200px</h5>
+        <div class="row">
+            <div class="col-xl-8">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, id?
+            </div>
+            <div class="col-xl-4">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+        
     </main>
 
 
