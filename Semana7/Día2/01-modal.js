@@ -17,7 +17,7 @@ btnModal.addEventListener("click", function(){
 })
 
 //ejecuta una función después de X tiempo
-//setTimeout(funcionAEjecutar, tiempo)
+//setTimeout(funcionAEjecutar, tiempo_en_ms)
 window.setTimeout(function(){
     bsModal.show()
-}, 3000)
+}, 5000)
