@@ -36,8 +36,8 @@ let ratonAmarillo = new Pokemon("Pikachu","Impact Trueno",60,20,30,"Eléctrico")
 
 let lechuguita = new Pokemon("Bulbasaur","Latigo Cepa",55, 20, 40, "Vegetal");
 
-console.table(ratonAmarillo);
+console.log(ratonAmarillo);
 
-console.table(lechuguita);
+console.log(lechuguita.Tipo);
 
-// lechuguita.aparecer()
+lechuguita.aparecer()
