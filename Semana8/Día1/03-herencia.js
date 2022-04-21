@@ -1,9 +1,4 @@
 class Animal {
-    Nombre;
-    Edad;
-    Familia;
-    Tamanio;
-
     constructor(nombre, edad, familia, tamanio){
         this.Nombre = nombre;
         this.Edad = edad;
@@ -46,5 +41,8 @@ class Conejo extends Roedor {
 }
 
 let Lola = new Conejo("Lola Bunny", 10, "lepórido", "Chiquita", 50, "mucho")
+
+Lola.pelaje = "Beige"
+Lola.Nombre = "Bad Bunny"
 
 console.log(Lola)
