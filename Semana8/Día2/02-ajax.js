@@ -1,7 +1,5 @@
 let cartero = new XMLHttpRequest();
 
-// console.log(cartero)
-
 const pedirDatos = (tareaFinal) => {
   //este evento me va a indicar el estado de mi peticion
   cartero.addEventListener("readystatechange", () => {
