@@ -13,14 +13,13 @@ const hornearTorta = () => {
         }, 5000)
     })
 }
-
 // console.log(hornearTorta())
 
 // then se ejecuta si fue bien
 hornearTorta()
-.then((resultado) => {
+.then((resultado) => { // bien
     console.log(resultado)
 })
-.catch((error) => {
+.catch((error) => { //mal
     console.log(error)
 })
