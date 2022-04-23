@@ -14,8 +14,8 @@ fetch("https://62636b83c430dc560d2ebb2a.mockapi.io/productos")
 
 //indicar la información del producto a crear
 let newProduct = {
-    prod_name:"Gorrito",
-    prod_desc:"Gorrito tejido a mano",
+    prod_name:"Guantes",
+    prod_desc:"Guantes tejido a mano",
     prod_image:"https://i.ytimg.com/vi/wdFt9zH4MqE/maxresdefault.jpg",
     prod_price: 40,
 }
@@ -25,9 +25,18 @@ let configuracion = {
     //method: método HTTP- GET, POST, PUT DELETE
     'method': 'POST',
     //El tipo de contenido que estamos enviando, JSON, BIN, Text
-    'Content-Type': "application/json",
+    'headers':{
+        'Content-Type': "application/json",
+    },
     //body, ya es la data a enviar
-    'body': newProduct
+    'body': JSON.stringify(newProduct)
 }
-
+//fetch(url_endpoint, configuracion)
 fetch("https://62636b83c430dc560d2ebb2a.mockapi.io/productos", configuracion)
+.then((response) => {
+    console.log(response)
+    return response.json()
+})
+.then((data) => {
+    console.log(data)
+})
