@@ -6,10 +6,12 @@
  */
 
 import { getProducts } from "./productoService.js";
+import { drawProducts } from "./interfaz.js";
 
 const obtainProducts = async () => {
     const products = await getProducts()
     console.table(products)
+    drawProducts(products)
 }
 
 obtainProducts();
