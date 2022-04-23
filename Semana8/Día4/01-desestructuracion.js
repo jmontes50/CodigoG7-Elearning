@@ -43,4 +43,20 @@ let {
 console.log(name);
 console.log(edad);
 console.log(institucion)
-console.log(ocupacion)
+// console.log(ocupacion)
+
+const describe = ({nombre, apellidos, edad, lugar, comida}) => {
+    return `Hola, soy ${nombre} ${apellidos}, tengo ${edad} años y vengo de ${lugar} donde ${comida} es el plato típico`;
+}
+
+let nuevaPersona = {
+    apellidos:"Diaz",
+    lugar:"Gotham",
+    comida:"la Hamburguesa",
+    edad:24,
+    nombre:"Bruno",
+}
+
+// console.log(describe("Perez","Juan", 20, "Arequipa", "es el Rocoto relleno"));
+
+console.log(describe(nuevaPersona))
