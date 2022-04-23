@@ -13,7 +13,7 @@ const hornearTorta = () => {
 const prepararGlaseado = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if(true){
+            if(false){
                 resolve("Glaseado Listo")
             }else{
                 reject("Quemamos el microondas")
@@ -25,7 +25,7 @@ const prepararGlaseado = () => {
 const cubrirTorta = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if(false){
+            if(true){
                 resolve("Torta Cubierta")
             }else{
                 reject("Ya fue la torta")
