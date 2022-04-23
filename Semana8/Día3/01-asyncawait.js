@@ -31,7 +31,8 @@ const pedirDatos = async () => {
   //await = Wait Chepiiiii, espera, esto es asíncrono
   try {
     //ejecuta este bloque de codigo y si todo va bien dame el resultado .then() / return / resolve
-    let rpta = await traerDatos();
+    let rpta = 
+     traerDatos();
     console.log(rpta);
     let rptaUsuario = await traerInfoUsuario();
     console.log(rptaUsuario);
