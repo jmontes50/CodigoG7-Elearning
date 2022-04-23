@@ -3,7 +3,6 @@ let pikachu1 = {
     fuerza:40,
     resistencia:30
 }
-
 let pikachuRojo = pikachu1;
 //Spread Operator
 //Spread = esparcir
@@ -21,6 +20,14 @@ console.table(pikachuRojo)
 
 console.table(pikachu1)
 
-
-
 console.log("Azul",pikachuAzul)
+
+//Spread Operator en Arreglos
+
+let platosAqp = ["Chicharrón","Rocoto Relleno","Cuy Chactado"]
+
+let platosLima = ["Lomo Saltado","Causa Limeña","Aji de Gallina"]
+
+let platosPeru = [...platosAqp, ...platosLima, "Lechón", "Humitas"]
+
+console.log(platosPeru)
