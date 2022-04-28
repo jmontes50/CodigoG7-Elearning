@@ -7,6 +7,13 @@
 
 import { getProducts } from "./productoService.js";
 import { drawProducts } from "./interfaz.js";
+//necesitamos tres referencias, 01 para el botón para escuchar el click!
+//para el modal para transformarlo en un modal de bootstrap
+//Y la tercera para el formulario
+const btnCrear = document.getElementById("btnCrear");
+const modalCrear = document.getElementById("modalCrear");
+const bsModalCrear = new bootstrap.Modal(modalCrear);
+const formCrear = document.getElementById("formCrear")
 
 const obtainProducts = async () => {
     try {
@@ -23,3 +30,20 @@ const obtainProducts = async () => {
 }
 
 obtainProducts();
+
+btnCrear.addEventListener("click", () => {
+    bsModalCrear.show()
+})
+
+formCrear.addEventListener("submit", (e) => {
+    //e = evento, preventDefault
+    e.preventDefault();
+    //obtener los valores de los input
+    // console.log(formCrear.prod_name.value)
+    const newProduct = {
+        prod_name: formCrear.prod_name.value,
+        prod_desc:formCrear.prod_desc.value,
+        prod_price:formCrear.prod_price.value,
+    }
+    console.log(newProduct)
+})
