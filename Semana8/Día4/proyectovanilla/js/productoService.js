@@ -18,18 +18,39 @@ const getProducts = () => {
         })
     })
 }
-// const getProducts = async () => {
-//     try {
-//         //GET
-//         const rpta = await fetch(URL) //fetch me da la respuesta, no los datos
-//         console.log(rpta)
-//         const datos = await rpta.json() 
-//         return datos;
-//     } catch (error) {
-//         throw error;
-//     }
-// }
+/** 
+    const getProducts = async () => {
+        try {
+            //GET
+            const rpta = await fetch(URL) //fetch me da la respuesta, no los datos
+            console.log(rpta)
+            const datos = await rpta.json() 
+            return datos;
+        } catch (error) {
+            throw error;
+        }
+    }
+*/
+
+const createProduct = async (objProduct) => {
+    //Para crear el Producto necesitamos hacer un POST
+    const config = {
+        method: "POST",
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(objProduct)
+    }
+    //fetch al retornar una promesa lo podemos utilizar con await
+    try {
+        //fetch(URL_del_endpoint, configuración)
+        const rpta = await fetch(URL, config) //la rpta tiene el statusCode: 201
+        const data = await rpta.json() //mockAPI nos va a devolver en la respuesta el objeto creado
+        return data
+    } catch (error) {
+        throw error
+    }
+}
 
 export {
-    getProducts
+    getProducts,
+    createProduct
 }
