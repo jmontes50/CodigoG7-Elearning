@@ -5,6 +5,7 @@ const drawProducts = (arrProducts) => {
 
     let contentProducts = '' //guardar el html generado a partir de arrProducts
     //desestructuramos cada item que tenga arrProducts, por sus propiedades
+    //es una muy buena práctica desestructurar
     arrProducts.forEach(({id, prod_name, prod_desc, prod_price, prod_image}) => {
         //por c/item de arrProducts, creamos una card de bootstrap con la información
         let cardProduct = `

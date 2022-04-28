@@ -9,11 +9,17 @@ import { getProducts } from "./productoService.js";
 import { drawProducts } from "./interfaz.js";
 
 const obtainProducts = async () => {
-    //obtiene los productos
-    const products = await getProducts() //get Productos trabaja con promesas
-    console.table(products)
-    //los dibuja
-    drawProducts(products)
+    try {
+        //obtiene los productos
+        const products = await getProducts() //get Productos trabaja con promesas
+        console.log({products})
+        // console.log({products:products})
+        // console.table(products)
+        //los dibuja
+        drawProducts(products)
+    } catch (error) {
+        alert("mensaje ocurrio un error al obtener la data")
+    }
 }
 
 obtainProducts();
