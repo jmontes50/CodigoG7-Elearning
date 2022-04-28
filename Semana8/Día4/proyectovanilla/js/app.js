@@ -9,8 +9,10 @@ import { getProducts } from "./productoService.js";
 import { drawProducts } from "./interfaz.js";
 
 const obtainProducts = async () => {
-    const products = await getProducts()
+    //obtiene los productos
+    const products = await getProducts() //get Productos trabaja con promesas
     console.table(products)
+    //los dibuja
     drawProducts(products)
 }
 
