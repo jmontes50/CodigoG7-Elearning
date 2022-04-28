@@ -55,6 +55,11 @@ formCrear.addEventListener("submit", async (e) => {
         bsModalCrear.hide() //escondemos el modal
         obtainProducts() //obtenemos una actualización de los productos
         //si llamamos sin el await, lo ejecuta pero no capturaremos ninguna respuesta de esa función
+        Swal.fire({
+            icon:'success',
+            title:'Éxito!',
+            text:'Producto Creado'
+        })
     } catch (error) {
         alert("Hubo un error al crear!")
     }
