@@ -1,4 +1,5 @@
 import {useState} from "react"
+import List from "./components/List"
 //1. los nombres de los componentes tienen que comenzar con Mayúscula
 const App = () => {
   //2. todo los archivos que utilicemos para la aplicación tienen que estar dentro de la carpeta src
@@ -31,6 +32,17 @@ const App = () => {
       <button onClick={() => {setContador(contador ++)}}>
         Aumentar!
       </button>
+      <hr></hr>
+      {/**OJO: Cuando podemos etiquetas ya sea de HTML o de un componente, tenemos que asegurarnos que siempre esten cerradas */}
+      <List />
+      <List />
+      <List />
+      <List />
+      <List />
+      <List />
+      <List />
+      <List />
+      <List />
     </>
   )
 
