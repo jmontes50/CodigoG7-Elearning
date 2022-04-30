@@ -7,8 +7,13 @@ export default function App() {
   const [nuevaTarea, setNuevaTarea] = useState("");
   
   const agregarTarea = () => {
-
     setTareas([...tareas, nuevaTarea])
+  }
+
+  const eliminarTarea = (indice) => {
+      let tareasTmp = [...tareas]
+      tareasTmp.splice(indice, 1)
+      setTareas(tareasTmp)
   }
   
   return (
@@ -16,7 +21,12 @@ export default function App() {
       <h1>ToDo App</h1>
 
       {tareas.map((item, i) => (
-        <TareaComponent key={i} tarea={item} />
+        <TareaComponent 
+            key={i} 
+            tarea={item} 
+            eliminarTarea={eliminarTarea}
+            indice={i}
+        />
       ))}
 
       <InputTareaComponent

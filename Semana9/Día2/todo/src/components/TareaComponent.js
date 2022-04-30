@@ -1,9 +1,13 @@
-export default function TareaComponent({tarea}) {
+export default function TareaComponent({tarea, eliminarTarea, indice}) {
     // console.log(props)
   return (
     <li>
         <span>{tarea}</span>
-        <button>Eliminar</button>
+        <button 
+         onClick={() => {eliminarTarea(indice)}}
+        >
+          Eliminar
+        </button>
     </li>
   )
 }
