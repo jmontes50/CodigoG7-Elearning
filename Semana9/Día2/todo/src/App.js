@@ -7,11 +7,14 @@ export default function App() {
   //Componentes controlados, todo value de un input debe estar amarrado a un estado
 
   const agregarTarea = () => {
-    // let tareasTmp = [...tareas]
-    // console.log({tareasTmp})
-    // tareasTmp.push(nuevaTarea)
-    // setTareas(tareasTmp)
     setTareas([...tareas, nuevaTarea])
+    setNuevaTarea("")
+  }
+
+  const eliminarTarea = (indice) => {
+    let tareasTmp = [...tareas]
+    tareasTmp.splice(indice, 1)
+    setTareas(tareasTmp)
   }
 
   //si una funcion retorna con () dentro de react, react asume que el return es JSX
@@ -22,7 +25,12 @@ export default function App() {
         {/**renderizado de listas */}
         {/**Cuando hacemos renderizado de listas hay que añadir a c/elemento un key y lo común es darle el indice(posición) de c/elemento en el arreglo */}
         {tareas.map((item, i) => (
-          <li key={i}>{item}</li>
+          <div key={i}>
+            <li>{item}</li>
+            <button onClick={() => {eliminarTarea(i)}}>
+              Eliminar
+            </button>
+          </div>
         ))}
       </ul>
       {/* componentes controlados */}
