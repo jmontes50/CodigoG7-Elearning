@@ -1,4 +1,4 @@
-import {useState} from "react"
+import { useState, useEffect } from "react"
 import List from "./components/List"
 //1. los nombres de los componentes tienen que comenzar con Mayúscula
 const App = () => {
@@ -10,15 +10,21 @@ const App = () => {
   //los estados de un componente son INMUTABLES es que no se pueden modificar
   //let [estado, funciónQueActualizaElEstado] = useState(estadoInicial)
   let [contador, setContador] = useState(0)
+  let [nombre, setNombre] = useState("Jorge")
 
   let miTexto = "Hola desde Javascript!!!";
   //5. cuando deseemos incluir código de JS dentro de JSX tenemos que utilizar {}
 
-  let subtitulo = "Lista subtítulo"
-
   const saludar = () => {
     return "Holaaaaa desde una función"
   }
+  let subtitulo = "Lista subtítulo"
+
+  //el useEffect se va a ejecutar cuando suceda un cambio en algún de estado del componente
+  //puede escuchar a un estado y tambien a los props
+  useEffect(() => {
+    console.log("Cambio el estado!")
+  })
 
   return (
     <>
@@ -30,9 +36,13 @@ const App = () => {
         <p>{10 + 20}</p>
         <p>{saludar()}</p>
         <p>Contador: {contador}</p>
+        <p>Nombre: {nombre}</p>
       </div>
       <button onClick={() => {setContador(contador ++)}}>
         Aumentar!
+      </button>
+      <button onClick={() => setNombre("Jorge Montesinos")}>
+        Cambiar Nombre
       </button>
       <hr></hr>
       {/**OJO: Cuando podemos etiquetas ya sea de HTML o de un componente, tenemos que asegurarnos que siempre esten cerradas */}

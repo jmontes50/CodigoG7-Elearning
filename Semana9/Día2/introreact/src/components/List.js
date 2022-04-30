@@ -2,7 +2,7 @@
 //1.1 Tienen que comenzar en mayúscula, tanto el nombre del archivo, como el nombre del componente
 
 const List = (props) => {
-    console.log(props)
+    // console.log(props)
 
 
     //return, sera el JSX que se dibujará en el navegador, y se suele utilizar con ()
