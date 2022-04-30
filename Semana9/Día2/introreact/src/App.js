@@ -14,6 +14,8 @@ const App = () => {
   let miTexto = "Hola desde Javascript!!!";
   //5. cuando deseemos incluir código de JS dentro de JSX tenemos que utilizar {}
 
+  let subtitulo = "Lista subtítulo"
+
   const saludar = () => {
     return "Holaaaaa desde una función"
   }
@@ -34,15 +36,11 @@ const App = () => {
       </button>
       <hr></hr>
       {/**OJO: Cuando podemos etiquetas ya sea de HTML o de un componente, tenemos que asegurarnos que siempre esten cerradas */}
-      <List />
-      <List />
-      <List />
-      <List />
-      <List />
-      <List />
-      <List />
-      <List />
-      <List />
+      {/** List("subtitulo 4") */}
+      <List miSubtitulo={subtitulo}/>
+      <List miSubtitulo="subtitulo 2"/>
+      <List miSubtitulo="subtitulo 3"/>
+      <List miSubtitulo={6}/>
     </>
   )
 
