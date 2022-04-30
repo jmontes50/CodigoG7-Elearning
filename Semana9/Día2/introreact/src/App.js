@@ -12,6 +12,8 @@ const App = () => {
   let [contador, setContador] = useState(0)
   let [nombre, setNombre] = useState("Jorge")
 
+  console.log("Yo estoy dentro de App!")
+
   let miTexto = "Hola desde Javascript!!!";
   //5. cuando deseemos incluir código de JS dentro de JSX tenemos que utilizar {}
 
@@ -22,13 +24,25 @@ const App = () => {
 
   //el useEffect se va a ejecutar cuando suceda un cambio en algún de estado del componente
   //puede escuchar a un estado y tambien a los props
+  //el useEffect por defecto, escucha a todos los estados
+  //useEffect(() => {}, [filtro]) , puedo agregar variables como filtro [] para que la función del useEffect solo se ejecute respecto al filtro que le pongamos
+  //a pesar que le pongamos filtro el useEffect se ejecuta si o si en el montaje
   useEffect(() => {
     console.log("Cambio el estado!")
-  })
+    //desmontaje
+    return () => {
+      //se ejecutaria algo al desmontar mi componente
+    }
+  }, [nombre]) 
+
+  useEffect(() => {
+    console.log("cambio el estado de contador", contador)
+  }, [contador])
 
   return (
     <>
       <div>
+        {console.log("Yo estoy dentro de el JSX")}
         <p>Hola Mundo!</p>
       </div>
       <div>
