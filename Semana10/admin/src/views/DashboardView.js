@@ -21,7 +21,9 @@ export default function DashboardView() {
       <h1>Dashboard</h1>
       <div className="card mt-3">
         <div className="card-body">
-          <h4 className="card-title">Categorias</h4>
+          <h4 className="card-title">
+            Categorias
+          </h4>
           <table className="table">
             <thead>
               <tr>
