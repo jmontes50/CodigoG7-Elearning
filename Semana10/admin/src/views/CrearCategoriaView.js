@@ -1,4 +1,19 @@
+import { useState } from "react"
+
 export default function CrearCategoriaView() {
+  const [input, setInput] = useState({
+    cat_nom:"",
+    cat_desc:""
+  })
+
+  const manejarInput = (e) => {
+    console.log("NAME",e.target.name)
+    console.log("VALUE",e.target.value)
+    setInput({
+      ...input,
+      [e.target.name]:e.target.value
+    })
+  }
   return (
     <>
         <h1>Crear Categoria</h1>
@@ -11,6 +26,9 @@ export default function CrearCategoriaView() {
                     className="form-control"
                     type="text"
                     placeholder="Ej. Cafés"
+                    name="cat_nom"
+                    value={input.cat_nom}
+                    onChange={(e) => {manejarInput(e)}}
                 />
             </div>
             <div className="mb-3">
