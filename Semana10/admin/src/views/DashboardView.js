@@ -21,7 +21,8 @@ export default function DashboardView() {
       <h1>Dashboard</h1>
       <div className="card mt-3">
         <div className="card-body">
-          <table class="table">
+          <h4 className="card-title">Categorias</h4>
+          <table className="table">
             <thead>
               <tr>
                 <th>
@@ -33,7 +34,16 @@ export default function DashboardView() {
               </tr>
             </thead>
             <tbody>
-              
+                {categorias.map((item, i) => (
+                  <tr key={i}>
+                    <td>
+                      {item.cat_nom}
+                    </td>
+                    <td>
+                      {item.cat_desc}
+                    </td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>
