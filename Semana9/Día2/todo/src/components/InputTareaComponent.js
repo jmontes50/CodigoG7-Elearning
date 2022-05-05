@@ -2,7 +2,17 @@
 export default function InputTareaComponent({nuevaTarea, setNuevaTarea, agregarTarea}) {
 
     const manejarInput = (e) => {
-        setNuevaTarea(e.target.value)
+      setNuevaTarea(e.target.value)
+    }
+
+    const manejarInputEnter = (e) => {
+     try {
+      if(e.key === "Enter"){
+        agregarTarea()
+      }
+     } catch (error) {
+       console.log(error)
+     }
     }
   return (
     <div>
@@ -11,6 +21,7 @@ export default function InputTareaComponent({nuevaTarea, setNuevaTarea, agregarT
             placeholder="Ingrese una nueva Tarea"
             value={nuevaTarea}
             onChange={(e) => {manejarInput(e)}}
+            onKeyUp={(e) => {manejarInputEnter(e)}}
         />
         <button
           onClick={agregarTarea}
