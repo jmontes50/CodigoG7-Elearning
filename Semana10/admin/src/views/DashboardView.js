@@ -9,11 +9,16 @@ export default function DashboardView() {
     .then((data) => {
       setCategorias(data)
     })
+    .catch((error) => {
+      console.log(error)
+    })
     //si le damos como argumento al useEffect un arreglo vacio como 2do parámetro, el useEffect solo se ejecutará una vez en la fase de montaje
   }, [])
 
 
   return (
-    <div>DashboardView</div>
+    <>
+      
+    </>
   )
 }
