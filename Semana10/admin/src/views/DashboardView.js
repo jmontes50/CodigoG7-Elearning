@@ -18,7 +18,26 @@ export default function DashboardView() {
 
   return (
     <>
-      
+      <h1>Dashboard</h1>
+      <div className="card mt-3">
+        <div className="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>
+                  Nombre
+                </th>
+                <th>
+                  Descripción
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
     </>
   )
 }
