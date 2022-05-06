@@ -9,7 +9,7 @@ export default function Navigation() {
             Admin App
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar" />
-        <Navbar.Collapse id="navbar">1
+        <Navbar.Collapse id="navbar">
           <Nav className="me-auto">
             <Link className="nav-link" to="/">
               Dashboard
@@ -17,8 +17,8 @@ export default function Navigation() {
             <Link className="nav-link" to="/crearcategoria">
               Crear Categoria
             </Link>
-            <Link className="nav-link" to="/crearlugar">
-              Crear Lugar
+            <Link className="nav-link" to="/lugares">
+              Ver Lugares
             </Link>
           </Nav>
         </Navbar.Collapse>

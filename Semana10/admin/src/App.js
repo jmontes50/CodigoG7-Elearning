@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 //Vistas
 import DashboardView from "./views/DashboardView"
 import CrearCategoriaView from "./views/CrearCategoriaView"
+import LugaresView from "./views/LugaresView"
 //Componentes
 import Navigation from "./components/Navigation"
 
@@ -22,6 +23,7 @@ export default function App() {
           {/* <Route path="/url" element={<Componente />} />*/}
           <Route path="/" element={<DashboardView />} />
           <Route path="/crearcategoria" element={<CrearCategoriaView />} />
+          <Route path="/lugares" element={<LugaresView />} />
         </Routes>
       </div>
     </Router>
