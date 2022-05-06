@@ -21,6 +21,7 @@ const obtenerCategorias = () => {
 }
 
 const crearCategoria = async (nuevaCategoria) => {
+    console.log(nuevaCategoria)
     try {
         const headers = {
             "Content-Type":"application/json"

@@ -8,7 +8,7 @@ export default function CrearCategoriaView() {
   })
 
   const manejarInput = (e) => {
-    console.log(e)
+    // console.log(e)
     // console.log("NAME",e.target.name)
     // console.log("VALUE",e.target.value)
     setInputs({
