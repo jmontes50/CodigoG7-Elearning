@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { crearCategoria } from "../services/categoriasService"
 import { useNavigate } from "react-router-dom"
+import Swal from "sweetalert2"
 
 export default function CrearCategoriaView() {
   const [inputs, setInputs] = useState({
@@ -25,10 +26,10 @@ export default function CrearCategoriaView() {
     e.preventDefault();
     try {
       await crearCategoria(inputs)
-      alert("Categoria Creada")
-      setInputs({
-        cat_nom:"",
-        cat_desc:""
+      // alert("Categoria Creada")
+      Swal.fire({
+        icon:"success",
+        title:"Categoría Creada!"
       })
       navigate('/') //llevame hacia el home, hacia la url /
     } catch (error) {
