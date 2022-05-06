@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { crearCategoria } from "../services/categoriasService"
 
 export default function CrearCategoriaView() {
   const [inputs, setInputs] = useState({
@@ -16,10 +17,25 @@ export default function CrearCategoriaView() {
       [e.target.name]:e.target.value
     })
   }
+
+  const manejarSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await crearCategoria(inputs)
+      alert("Categoria Creada")
+      setInputs({
+        cat_nom:"",
+        cat_desc:""
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <>
         <h1>Crear Categoria</h1>
-        <form>
+        <form onSubmit={(e) => {manejarSubmit(e)}}>
             <div className="mb-3">
                 <label className="form-label">
                     Nombre categoria
@@ -46,6 +62,9 @@ export default function CrearCategoriaView() {
                     onChange={(e) => {manejarInput(e)}}
                 />
             </div>
+            <button type="submit" className="btn btn-primary">
+              Guardar
+            </button>
         </form>
     </>
   )

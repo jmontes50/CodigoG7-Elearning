@@ -20,6 +20,25 @@ const obtenerCategorias = () => {
     })
 }
 
+const crearCategoria = async (nuevaCategoria) => {
+    try {
+        const headers = {
+            "Content-Type":"application/json"
+        }
+        //.post(url, data, {headers})
+        const { data, status } = await axios.post(URL, nuevaCategoria, {headers})
+        console.log(status)
+        if(status === 201){
+            return data
+        }else{
+            throw "Error al obtener data"
+        }
+    } catch (error) {
+        throw error
+    }
+}
+
 export {
-    obtenerCategorias
+    obtenerCategorias,
+    crearCategoria
 }
