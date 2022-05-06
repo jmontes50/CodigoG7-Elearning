@@ -1,11 +1,14 @@
 import { useState } from "react"
 import { crearCategoria } from "../services/categoriasService"
+import { useNavigate } from "react-router-dom"
 
 export default function CrearCategoriaView() {
   const [inputs, setInputs] = useState({
     cat_nom:"",
     cat_desc:""
   })
+
+  const navigate = useNavigate() //es como un new Navigate()
 
   const manejarInput = (e) => {
     // console.log(e)
@@ -27,6 +30,7 @@ export default function CrearCategoriaView() {
         cat_nom:"",
         cat_desc:""
       })
+      navigate('/') //llevame hacia el home, hacia la url /
     } catch (error) {
       console.log(error)
     }
