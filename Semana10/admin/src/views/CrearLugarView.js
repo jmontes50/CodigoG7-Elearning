@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { obtenerCategorias } from '../services/categoriasService'
+import { crearLugar } from '../services/lugaresService'
 
 export default function CrearLugarView() {
   const [inputs, setInputs] = useState({
@@ -18,6 +19,15 @@ export default function CrearLugarView() {
       //le asignabamos el valor
       [e.target.name]:e.target.value
     })
+  }
+
+  const manejarSubmit = async(e) => {
+    e.preventDefault()
+    try {
+      await crearLugar(inputs)
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   useEffect(() => {
@@ -43,7 +53,7 @@ export default function CrearLugarView() {
       <h1 className='mb-3'>
         Crear Lugar
       </h1>
-      <form>
+      <form onSubmit={(e) => {manejarSubmit(e)}}>
         <div className='mb-3'>
           <label className='form-label'>
             Nombre lugar:
