@@ -3,7 +3,7 @@ import { obtenerCategorias } from '../services/categoriasService'
 import { crearLugar } from '../services/lugaresService'
 import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
-import { MapContainer, TileLayer } from "react-leaflet"
+import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet"
 
 export default function CrearLugarView() {
   const [inputs, setInputs] = useState({
@@ -13,6 +13,8 @@ export default function CrearLugarView() {
     categoriaId:1
   })
   const [categorias, setCategorias] = useState([])
+  //[latitud, longitud]
+  const [marcador, setMarcador] = useState([-12, -77])
 
   const navigate = useNavigate()
 
@@ -50,6 +52,16 @@ export default function CrearLugarView() {
       return true
     }
     return false
+  }
+
+  const AddMarker = () => {
+    const map = useMapEvents({
+      click: (e) => {
+        console.log(e)
+        const {lat, lng} = e.latlng
+        setMarcador([lat, lng])
+      }
+    })
   }
 
   useEffect(() => {
@@ -145,7 +157,8 @@ export default function CrearLugarView() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-
+          <AddMarker />
+          <Marker position={marcador} />
         </MapContainer>
         <button 
           className='btn btn-primary' 
