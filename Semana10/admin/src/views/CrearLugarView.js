@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { obtenerCategorias } from '../services/categoriasService'
 import { crearLugar } from '../services/lugaresService'
+import { useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 export default function CrearLugarView() {
   const [inputs, setInputs] = useState({
@@ -10,6 +12,8 @@ export default function CrearLugarView() {
     categoriaId:1
   })
   const [categorias, setCategorias] = useState([])
+
+  const navigate = useNavigate()
 
   const manejarInputs = (e) => {
     console.log(e.target.name)
@@ -25,9 +29,26 @@ export default function CrearLugarView() {
     e.preventDefault()
     try {
       await crearLugar(inputs)
+      Swal.fire({
+        icon:"success",
+        title:"Lugar creado!"
+      })
+      navigate("/lugares")
+
     } catch (error) {
       console.log(error)
     }
+  }
+
+  const existeErrorInputs = () => {
+    if(inputs.lug_nom.trim() === "" || 
+    inputs.lug_desc.trim() === "" || 
+    inputs.lug_dir.trim() === ""){
+      //si alguno de los inputs quitandoles los espacios no tiene nada de texto retornare true
+      //Si se ejecuta un return ahí finaliza la función
+      return true
+    }
+    return false
   }
 
   useEffect(() => {
@@ -112,7 +133,11 @@ export default function CrearLugarView() {
             ))}
           </select>
         </div>
-        <button className='btn btn-primary' type="submit">
+        <button 
+          className='btn btn-primary' 
+          type="submit" 
+          disabled={existeErrorInputs()}
+        >
           Guardar
         </button>
       </form>

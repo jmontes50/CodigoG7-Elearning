@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { obtenerCategorias } from "../services/categoriasService"
+import { Link } from "react-router-dom"
 
 export default function LugaresView() {
 
@@ -28,9 +29,9 @@ export default function LugaresView() {
       <h1 className="mb-3">
         Lugares
       </h1>
-      <button className="btn btn-success mb-2">
+      <Link className="btn btn-success mb-2" to="/crearlugar">
         Crear nuevo lugar
-      </button>
+      </Link>
       <table className="table">
         <thead>
           <tr>
