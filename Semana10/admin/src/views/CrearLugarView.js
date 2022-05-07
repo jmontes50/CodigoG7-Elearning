@@ -3,6 +3,7 @@ import { obtenerCategorias } from '../services/categoriasService'
 import { crearLugar } from '../services/lugaresService'
 import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
+import { MapContainer, TileLayer } from "react-leaflet"
 
 export default function CrearLugarView() {
   const [inputs, setInputs] = useState({
@@ -133,6 +134,19 @@ export default function CrearLugarView() {
             ))}
           </select>
         </div>
+        {/* estilos directamente, style={{propiedad:"valor"}}  */}
+        <MapContainer
+          center={[-12, -77]}
+          zoom={15}
+          style={{height:"400px"}}
+        >
+          {/* proveedor de datos para el mapa */}
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+
+        </MapContainer>
         <button 
           className='btn btn-primary' 
           type="submit" 
