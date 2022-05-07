@@ -37,6 +37,34 @@ export default function CrearLugarView() {
             onChange={(e) => {manejarInputs(e)}}
           />
         </div>
+
+        <div className='mb-3'>
+          <label className='form-label'>
+            Descripción del lugar
+          </label>
+          <input 
+            type="text"
+            placeholder="Ingrese descripción"
+            className="form-control"
+            name="lug_desc"
+            value={inputs.lug_desc}
+            onChange={(e) => {manejarInputs(e)}}
+          />
+        </div>
+
+        <div className='mb-3'>
+          <label className='form-label'>
+            Dirección del lugar
+          </label>
+          <input 
+            type="text"
+            placeholder="Ingrese dirección"
+            className="form-control"
+            name="lug_dir"
+            value={inputs.lug_dir}
+            onChange={(e) => {manejarInputs(e)}}
+          />
+        </div>
       </form>
     </div>
   )
