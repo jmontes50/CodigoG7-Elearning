@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { obtenerCategorias } from '../services/categoriasService'
 
 export default function CrearLugarView() {
   const [inputs, setInputs] = useState({
@@ -7,6 +8,7 @@ export default function CrearLugarView() {
     lug_dir:"",
     categoriaId:1
   })
+  const [categorias, setCategorias] = useState([])
 
   const manejarInputs = (e) => {
     console.log(e.target.name)
@@ -17,6 +19,24 @@ export default function CrearLugarView() {
       [e.target.name]:e.target.value
     })
   }
+
+  useEffect(() => {
+    const getCategorias = async () => {
+      try {
+        const categoriasObtenidas = await obtenerCategorias()
+        // console.log({categoriasObtenidas})
+        //solamente necesitamos el id y el nombre
+        const infoCategorias = categoriasObtenidas.map(({cat_id, cat_nom}) => {
+          return {cat_nom:cat_nom, cat_id:cat_id}
+        })
+        // console.log({infoCategorias})
+        setCategorias(infoCategorias)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getCategorias()
+  }, [])
 
   return (
     <div>
@@ -51,7 +71,6 @@ export default function CrearLugarView() {
             onChange={(e) => {manejarInputs(e)}}
           />
         </div>
-
         <div className='mb-3'>
           <label className='form-label'>
             Dirección del lugar
