@@ -89,19 +89,22 @@ export default function CrearLugarView() {
           <label className='form-label'>
             Seleccione una categoría
           </label>
-          <input
-            className='form-control'
-            list="listaCategorias"
+          <select 
+            className='form-select'
             name="categoriaId"
-          />
-          <datalist id="listaCategorias">
+            value={inputs.categoriaId}
+            onChange={(e) => manejarInputs(e)}
+          >
             {categorias.map(({cat_id, cat_nom}, i) => (
-              <option value={cat_id}>
+              <option value={cat_id} key={i}>
                 {cat_nom}
               </option>
             ))}
-          </datalist>
+          </select>
         </div>
+        <button className='btn btn-primary' type="submit">
+          Guardar
+        </button>
       </form>
     </div>
   )
