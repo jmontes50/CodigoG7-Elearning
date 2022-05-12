@@ -27,5 +27,7 @@ const subirArchivo = (archivo) => {
     })
 }
 
-
+export {
+    subirArchivo
+}
 

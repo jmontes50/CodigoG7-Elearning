@@ -159,6 +159,15 @@ export default function CrearLugarView() {
             ))}
           </select>
         </div>
+        <div className="mb-3">
+          <label className="form-label">
+            Seleccione Imagen
+          </label>
+          <input
+            type="file"
+            className="form-control"
+          />
+        </div>
         {/* estilos directamente, style={{propiedad:"valor"}}  */}
         <MapContainer 
           center={inputs.lug_coords} 
