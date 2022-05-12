@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { obtenerCategorias } from "../services/categoriasService";
 import { crearLugar } from "../services/lugaresService";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +10,9 @@ import {
   useMapEvents,
   Popup,
 } from "react-leaflet";
+import { subirArchivo } from "../config/fireStorage"
+
+let miArchivo = null;
 
 export default function CrearLugarView() {
   const [inputs, setInputs] = useState({
@@ -23,6 +26,8 @@ export default function CrearLugarView() {
   //[latitud, longitud]
   // const [marcador, setMarcador] = useState([]);
 
+  const inputFile = useRef()
+
   const navigate = useNavigate();
 
   const manejarInputs = (e) => {
@@ -35,10 +40,17 @@ export default function CrearLugarView() {
     });
   };
 
+  const manejarFile = (e) => {
+    // console.log("manejar File", e.target.files)
+    miArchivo = e.target.files[0]
+  }
+
   const manejarSubmit = async (e) => {
     e.preventDefault();
     try {
-      await crearLugar(inputs);
+      const archivoSubido = await subirArchivo(miArchivo)
+      console.log({archivoSubido})
+      // await crearLugar(inputs);
       Swal.fire({
         icon: "success",
         title: "Lugar creado!",
@@ -166,6 +178,8 @@ export default function CrearLugarView() {
           <input
             type="file"
             className="form-control"
+            ref={inputFile}
+            onChange={(e) => {manejarFile(e)}}
           />
         </div>
         {/* estilos directamente, style={{propiedad:"valor"}}  */}
