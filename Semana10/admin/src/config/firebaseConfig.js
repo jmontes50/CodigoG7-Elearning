@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getStorage } from "firebase/storage"
 
 // Your web app's Firebase configuration
 
@@ -11,10 +12,11 @@ const firebaseConfig = {
     appId: process.env.REACT_APP_APP_ID
   };
 
-  console.log({firebaseConfig})
-  
-  const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
-  export {
-      app
-  }
+// es una referencia al modulo de storage que estamos instanciando con nuestra configuración de firebase
+const storage = getStorage(app)
+
+export {
+    storage
+}

@@ -10,7 +10,6 @@ import {
   useMapEvents,
   Popup,
 } from "react-leaflet";
-import { app } from "../config/firebaseConfig";
 
 export default function CrearLugarView() {
   const [inputs, setInputs] = useState({
