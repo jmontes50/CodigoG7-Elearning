@@ -1,6 +1,8 @@
 import axios from "axios"
 
-const URL = "https://62729d5925fed8fcb5f724b1.mockapi.io";
+//process.env hace referencia a las variables de entorno para después indicar que variable deseamos obtener, process.env.NOMBRE_DE_LA_VARIABLE_DE_ENTORNO
+const URL = process.env.REACT_APP_API;
+// console.log(process.env.REACT_APP_API)
 
 const crearLugar = async(nuevoLugar) => {
     try {
