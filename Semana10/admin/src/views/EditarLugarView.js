@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { obtenerCategorias } from "../services/categoriasService";
-import { crearLugar, obtenerLugarPorId } from "../services/lugaresService";
+import { crearLugar, editarLugar, obtenerLugarPorId } from "../services/lugaresService";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 // useParams nos permite obtener los parámetros que nosotros tengamos en la URL
@@ -52,15 +52,19 @@ export default function EditarLugarView() {
   const manejarSubmit = async (e) => {
     e.preventDefault();
     try {
-      // setLoading antes de ejecutar nuestras funciones para subir un archivo y crear u lugar
       setLoading(true)
-      const archivoSubido = await subirArchivo(miArchivo)
-      // console.log({archivoSubido})
-      await crearLugar({...inputs, lug_img:archivoSubido});
+      if(miArchivo === null){
+        //si es que no he tocado el input de Archivo, editamos el lugar con la información de los input y la imagen que tenemos
+        await editarLugar(idCat, idLugar, inputs)
+      }else{
+        //Si es que hemos agregado una imagen con el inputFile, subo la nueva imagen y la modifico en la propiedad lug_img
+        const archivoSubido = await subirArchivo(miArchivo)
+        await editarLugar(idCat, idLugar, {...inputs, lug_img:archivoSubido})
+      }
       setLoading(false)
       Swal.fire({
         icon: "success",
-        title: "Lugar creado!",
+        title: "Lugar modificado!",
       });
       navigate("/lugares");
     } catch (error) {
@@ -125,7 +129,7 @@ export default function EditarLugarView() {
 
   return (
     <div>
-      <h1 className="mb-3">Crear Lugar</h1>
+      <h1 className="mb-3">Editar Lugar</h1>
       <form
         onSubmit={(e) => {
           manejarSubmit(e);
