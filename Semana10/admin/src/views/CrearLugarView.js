@@ -49,8 +49,8 @@ export default function CrearLugarView() {
     e.preventDefault();
     try {
       const archivoSubido = await subirArchivo(miArchivo)
-      console.log({archivoSubido})
-      // await crearLugar(inputs);
+      // console.log({archivoSubido})
+      await crearLugar({...inputs, lug_img:archivoSubido});
       Swal.fire({
         icon: "success",
         title: "Lugar creado!",
