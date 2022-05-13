@@ -60,6 +60,8 @@ export default function CrearLugarView() {
       });
       navigate("/lugares");
     } catch (error) {
+      setLoading(false)
+      //Swal
       console.log(error);
     }
   };
