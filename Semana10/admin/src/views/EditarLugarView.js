@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { obtenerCategorias } from "../services/categoriasService";
-import { crearLugar } from "../services/lugaresService";
+import { crearLugar, obtenerLugarPorId } from "../services/lugaresService";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+// useParams nos permite obtener los parámetros que nosotros tengamos en la URL
+import { useParams } from "react-router-dom";
 import {
   MapContainer,
   TileLayer,
@@ -29,6 +31,8 @@ export default function EditarLugarView() {
   const inputFile = useRef()
 
   const navigate = useNavigate();
+
+  const {idCat, idLugar} = useParams()
 
   const manejarInputs = (e) => {
     console.log(e.target.name);
@@ -95,16 +99,18 @@ export default function EditarLugarView() {
   useEffect(() => {
     const getCategorias = async () => {
       try {
+        //Aquí obtenemos las categorias
         const categoriasObtenidas = await obtenerCategorias();
-        // console.log({categoriasObtenidas})
-        //solamente necesitamos el id y el nombre
         const infoCategorias = categoriasObtenidas.map(
           ({ cat_id, cat_nom }) => {
             return { cat_nom: cat_nom, cat_id: cat_id };
           }
         );
-        // console.log({infoCategorias})
         setCategorias(infoCategorias);
+        //Después obtenemos el lugar que queremos editar
+        const lugarAEditar = await obtenerLugarPorId(idCat, idLugar)
+        console.log({lugarAEditar})
+        setInputs(lugarAEditar)
       } catch (error) {
         console.log(error);
       }

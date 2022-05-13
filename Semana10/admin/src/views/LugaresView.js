@@ -42,13 +42,14 @@ export default function LugaresView() {
           </tr>
         </thead>
         <tbody>
-          {lugares.map(({lug_nom, lug_desc, lug_dir}, i) => (
+          {lugares.map(({lug_nom, lug_desc, lug_dir, lug_id, categoriaId}, i) => (
             <tr key={i}>
               <td>{lug_nom}</td>
               <td>{lug_desc}</td>
               <td>{lug_dir}</td>
               <td>
-                <Link className="btn btn-warning btn-sm" to="/editarlugar">
+                {/* la url para llevarnos a la vista de editar va a ser armada con editarlugar y el id de la categoria y el lugar respectivamente */}
+                <Link className="btn btn-warning btn-sm" to={`/editarlugar/${categoriaId}/${lug_id}`}>
                   <i className="fa-solid fa-file-pen" />
                 </Link>
               </td>

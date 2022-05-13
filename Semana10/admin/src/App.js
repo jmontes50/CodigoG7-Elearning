@@ -27,7 +27,8 @@ export default function App() {
           <Route path="/crearcategoria" element={<CrearCategoriaView />} />
           <Route path="/lugares" element={<LugaresView />} />
           <Route path="/crearlugar" element={<CrearLugarView />} />
-          <Route path="/editarlugar" element={<EditarLugarView />} />
+          {/* cuando ponemos path="/direccion/:param" lo que estamos es indicar que en esa ubicación vamos a recibir un parámetro*/}
+          <Route path="/editarlugar/:idCat/:idLugar" element={<EditarLugarView />} />
         </Routes>
       </div>
     </Router>
