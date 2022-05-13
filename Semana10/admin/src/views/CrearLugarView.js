@@ -41,7 +41,7 @@ export default function CrearLugarView() {
   };
 
   const manejarFile = (e) => {
-    // console.log("manejar File", e.target.files)
+    // console.log("manejar File", e.target.files[0])
     miArchivo = e.target.files[0]
   }
 
