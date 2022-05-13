@@ -11,6 +11,7 @@ import {
   Popup,
 } from "react-leaflet";
 import { subirArchivo } from "../config/fireStorage"
+import Cargando from "../components/Cargando"
 
 let miArchivo = null;
 
@@ -23,8 +24,7 @@ export default function CrearLugarView() {
     lug_coords:[-12.018, -77.005]
   });
   const [categorias, setCategorias] = useState([]);
-  //[latitud, longitud]
-  // const [marcador, setMarcador] = useState([]);
+  const [loading, setLoading] = useState(false)
 
   const inputFile = useRef()
 
@@ -48,9 +48,12 @@ export default function CrearLugarView() {
   const manejarSubmit = async (e) => {
     e.preventDefault();
     try {
+      // setLoading antes de ejecutar nuestras funciones para subir un archivo y crear u lugar
+      setLoading(true)
       const archivoSubido = await subirArchivo(miArchivo)
       // console.log({archivoSubido})
       await crearLugar({...inputs, lug_img:archivoSubido});
+      setLoading(false)
       Swal.fire({
         icon: "success",
         title: "Lugar creado!",
@@ -106,6 +109,11 @@ export default function CrearLugarView() {
     };
     getCategorias();
   }, []);
+
+  if(loading){
+    //en caso el estado loading sea verdadero en vez de retornar mi componente con sus inputs, retorno el componente Cargando
+    return <Cargando />
+  }
 
   return (
     <div>
