@@ -47,7 +47,11 @@ export default function LugaresView() {
               <td>{lug_nom}</td>
               <td>{lug_desc}</td>
               <td>{lug_dir}</td>
-              <td></td>
+              <td>
+                <Link className="btn btn-warning btn-sm" to="/editarlugar">
+                  <i className="fa-solid fa-file-pen" />
+                </Link>
+              </td>
             </tr>
           ))}
         </tbody>

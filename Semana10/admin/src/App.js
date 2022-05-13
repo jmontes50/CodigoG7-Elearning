@@ -7,6 +7,7 @@ import DashboardView from "./views/DashboardView"
 import CrearCategoriaView from "./views/CrearCategoriaView"
 import LugaresView from "./views/LugaresView"
 import CrearLugarView from "./views/CrearLugarView"
+import EditarLugarView from "./views/EditarLugarView"
 //Componentes
 import Navigation from "./components/Navigation"
 
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/crearcategoria" element={<CrearCategoriaView />} />
           <Route path="/lugares" element={<LugaresView />} />
           <Route path="/crearlugar" element={<CrearLugarView />} />
+          <Route path="/editarlugar" element={<EditarLugarView />} />
         </Routes>
       </div>
     </Router>
