@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { obtenerCategorias } from "../services/categoriaService";
 
+import LugaresList from "./LugaresList";
+
 export default function CategoriasList() {
   const [misCategorias, setMisCategorias] = useState([]);
   const [page, setPage] = useState(1);
@@ -33,6 +35,7 @@ export default function CategoriasList() {
       <button className="btn btn-outline-success btn-sm" onClick={manejarVerMas}>
         Ver más...
       </button>
+      <LugaresList misCategorias={misCategorias} />
     </div>
   );
 }
