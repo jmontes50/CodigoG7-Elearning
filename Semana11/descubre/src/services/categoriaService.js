@@ -4,7 +4,7 @@ const URL = process.env.REACT_APP_API;
 
 const obtenerCategorias = async () => {
     try {
-        const { data, status } = await axios.get(URL);
+        const { data, status } = await axios.get(`${URL}/categorias`);
         if(status === 200) return data
         throw Error("Error al obtener data")
     } catch (error) {

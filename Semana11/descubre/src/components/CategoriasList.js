@@ -17,5 +17,6 @@ export default function CategoriasList() {
   useEffect(() => {
     getCategorias()
   }, [])
+  
   return <div>CategoriasList</div>;
 }
