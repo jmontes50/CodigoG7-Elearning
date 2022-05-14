@@ -5,9 +5,11 @@ import HomeView from "./views/HomeView"
 export default function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<HomeView />} />
-      </Routes>
+      <div className="container mt-4">
+        <Routes>
+          <Route path="/" element={<HomeView />} />
+        </Routes>
+      </div>
     </Router>
   )
 }
