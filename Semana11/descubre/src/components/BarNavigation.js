@@ -1,7 +1,13 @@
+import { useContext } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom"
+import Badge from '@mui/material/Badge';
+import { FavoritosContext } from "../context/favoritosContext";
 
 export default function BarNavigation() {
+
+  const { favoritos } = useContext(FavoritosContext)
+
   return (
     <Navbar bg="success" variant="dark">
       <Container>
@@ -15,7 +21,9 @@ export default function BarNavigation() {
               Inicio
             </Link>
             <Link className="nav-link" to="/">
-              Mis favoritos
+              <Badge badgeContent={favoritos.length} color="success">
+                Mis favoritos
+              </Badge>
             </Link>
             
           </Nav>
