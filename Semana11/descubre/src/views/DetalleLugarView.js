@@ -1,11 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { obtenerLugar } from "../services/lugarService";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+//para utilizar un context vamos a necesitar 2 cosas, useContext de React y el contexto en si
+import { FavoritosContext } from "../context/favoritosContext";
 
 export default function DetalleLugarView() {
   const [miLugar, setMiLugar] = useState(null);
   const { catId, lugId } = useParams();
+
+  const {favoritos, anadirAFavoritos} = useContext(FavoritosContext)
 
   useEffect(() => {
     const getLugar = async () => {
@@ -27,7 +31,15 @@ export default function DetalleLugarView() {
     */}
       {miLugar ? (
         <div>
-          <h2>{miLugar.lug_nom}</h2>
+          <div className="d-flex justify-content-between">
+            <h2>{miLugar.lug_nom}</h2>
+            <button 
+              className="btn btn-outline-success" 
+              onClick={() => {anadirAFavoritos(miLugar)}}
+            >
+              Agregar a favoritos
+            </button>
+          </div>
           <div className="row mt-4">
             <div className="col-12 col-lg-8">
               <p>
