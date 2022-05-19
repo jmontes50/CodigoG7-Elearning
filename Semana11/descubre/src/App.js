@@ -1,11 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import BarNavigation from "./components/BarNavigation"
 import HomeView from "./views/HomeView"
 import DetalleLugarView from "./views/DetalleLugarView"
 
 export default function App() {
   return (
     <Router>
+      <BarNavigation />
       <div className="container mt-4">
         <Routes>
           <Route path="/" element={<HomeView />} />
