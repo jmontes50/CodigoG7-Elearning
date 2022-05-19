@@ -19,7 +19,7 @@ export default function BarNavigation() {
             <Link className="nav-link" to="/">
               Inicio
             </Link>
-            <Link className="nav-link" to="/">
+            <Link className="nav-link" to="/favoritos">
               <Badge badgeContent={favoritos.length} color="success">
                 Mis favoritos
               </Badge>
