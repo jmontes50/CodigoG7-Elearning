@@ -5,7 +5,6 @@ import Badge from '@mui/material/Badge';
 import { FavoritosContext } from "../context/favoritosContext";
 
 export default function BarNavigation() {
-
   const { favoritos } = useContext(FavoritosContext)
 
   return (
