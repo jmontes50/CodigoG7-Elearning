@@ -11,7 +11,10 @@ export default function FavoritosView() {
         <div>
           {favoritos.map((item, i) => (
             <div className="card mb-3" key={i}>
-              <div className="row" style={{ maxHeight: "200px", overflow:'hidden' }}>
+              <div 
+                className="row" 
+                style={{ maxHeight: "200px", overflow:'hidden' }}
+              >
                 <div className="col-md-4">
                   <img
                     src={item.lug_img}
@@ -21,11 +24,16 @@ export default function FavoritosView() {
                 </div>
                 <div className="col-md-8">
                   <div className="card-body">
-                    <h5 className="card-title">{item.lug_nom}</h5>
-                    <p className="card-text">{item.lug_desc}</p>
+                    <h5 className="card-title">
+                      {item.lug_nom}</h5>
+                    <p className="card-text">
+                      {item.lug_desc}
+                    </p>
                     <p className="card-text">
                       <small>
-                        <i className="fa-solid fa-location-dot me-2 text-success"></i>
+                        <i 
+                        className="fa-solid fa-location-dot me-2 text-success"
+                        />
                         {item.lug_dir}
                       </small>
                     </p>
@@ -36,7 +44,9 @@ export default function FavoritosView() {
           ))}
         </div>
       ) : (
-        <h4>Todavia no ha seleccionado lugares como favoritos</h4>
+        <h4>
+          Todavia no ha seleccionado lugares como favoritos
+        </h4>
       )}
     </>
   );

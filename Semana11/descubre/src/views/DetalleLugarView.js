@@ -5,11 +5,18 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 //para utilizar un context vamos a necesitar 2 cosas, useContext de React y el contexto en si
 import { FavoritosContext } from "../context/favoritosContext";
 
+import TextField from "@mui/material/TextField";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+
 export default function DetalleLugarView() {
   const [miLugar, setMiLugar] = useState(null);
+  const [fecha, setFecha] = useState(null);
+
   const { catId, lugId } = useParams();
 
-  const {favoritos, anadirAFavoritos} = useContext(FavoritosContext)
+  const { favoritos, anadirAFavoritos } = useContext(FavoritosContext);
 
   useEffect(() => {
     const getLugar = async () => {
@@ -33,9 +40,11 @@ export default function DetalleLugarView() {
         <div>
           <div className="d-flex justify-content-between">
             <h2>{miLugar.lug_nom}</h2>
-            <button 
-              className="btn btn-outline-success" 
-              onClick={() => {anadirAFavoritos(miLugar)}}
+            <button
+              className="btn btn-outline-success"
+              onClick={() => {
+                anadirAFavoritos(miLugar);
+              }}
             >
               Agregar a favoritos
             </button>
@@ -50,23 +59,35 @@ export default function DetalleLugarView() {
                 <img src={miLugar.lug_img} alt={miLugar.lug_nom} />
               </div>
             </div>
+            <div className="col-12 col-lg-4">
+              <LocalizationProvider dateAdapter={AdapterDateFns}>
+                <DatePicker
+                  label="Fecha de reserva"
+                  value={fecha}
+                  onChange={(nuevaFecha) => {
+                    setFecha(nuevaFecha);
+                  }}
+                  renderInput={(params) => <TextField {...params} />}
+                />
+              </LocalizationProvider>
+            </div>
             <p className="lead mt-3">{miLugar.lug_desc}</p>
-            <MapContainer 
+            <MapContainer
               style={{ height: "500px" }}
               center={miLugar.lug_coords}
               zoom={18}
             >
-               <TileLayer
-                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <Marker position={miLugar.lug_coords}>
-                  <Popup>
-                    <i className="fa-solid fa-location-arrow text-success me-2 fa-2x"></i>
-                    <h6>{miLugar.lug_nom}</h6>
-                    <small>{miLugar.lug_desc}</small>
-                  </Popup>
-                </Marker>
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              <Marker position={miLugar.lug_coords}>
+                <Popup>
+                  <i className="fa-solid fa-location-arrow text-success me-2 fa-2x"></i>
+                  <h6>{miLugar.lug_nom}</h6>
+                  <small>{miLugar.lug_desc}</small>
+                </Popup>
+              </Marker>
             </MapContainer>
           </div>
         </div>
