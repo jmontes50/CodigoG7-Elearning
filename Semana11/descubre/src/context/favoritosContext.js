@@ -10,5 +10,11 @@ const FavoritosContextProvider = (props) => {
         setFavoritos([...favoritos, lugar])
     }
 
-    
+    //último paso
+    return (
+        <FavoritosContext.Provider value={{favoritos, anadirAFavoritos}} >
+            {/* con props.children indicamos que este componente va a renderizar componentes hijos pero sin saberlo */}
+            {props.children}
+        </FavoritosContext.Provider>
+    )
 }
