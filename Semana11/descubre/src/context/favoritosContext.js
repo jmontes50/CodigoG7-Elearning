@@ -10,6 +10,21 @@ const FavoritosContextProvider = (props) => {
         setFavoritos([...favoritos, lugar])
     }
 
+    //useEffect para dos situaciones, cuando iniciemos nuestro contexto y tambien cuando cambiemos el contexto
+    useEffect(() => {
+        const favoritosStorage = JSON.parse(localStorage.getItem("descubre_favoritos"))
+        console.log({favoritosStorage})
+        if(favoritosStorage){
+            setFavoritos(favoritosStorage)
+        }
+    }, [])
+
+    useEffect(() => {
+        // validamos que si la longitud de favoritos es igual a 0 no fuerce la actualización en el localStorage
+        if(favoritos.length === 0) return
+        localStorage.setItem("descubre_favoritos", JSON.stringify(favoritos))
+    }, [favoritos])
+
     //último paso
     return (
         <FavoritosContext.Provider value={{favoritos, anadirAFavoritos}} >
