@@ -7,8 +7,8 @@ export default function LugaresList({ misCategorias }) {
   return (
     <div className="row mt-4">
       {arrLugares.map(({ lug_nom, lug_desc, lug_img, categoriaId, lug_id }, i) => (
-        <div className="col-12 col-md-6 col-lg-3">
-          <div className="card mb-4" key={i}>
+        <div className="col-12 col-md-6 col-lg-3" key={i}>
+          <div className="card mb-4">
             <img
               src={lug_img}
               className="card-img-top img-fluid"

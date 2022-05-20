@@ -12,9 +12,9 @@ export const AuthContextProvider = (props) => {
     const signInGoogle = async () => {
         try {
             const resultado = await signInWithPopup(auth, proveedorGoogle) //loguearse con popup
-            console.log({resultado})
+            return resultado
         } catch (error) {
-            console.log({error})
+            throw error
         }
     }
 

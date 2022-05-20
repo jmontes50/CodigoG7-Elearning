@@ -30,9 +30,6 @@ export default function BarNavigation() {
             ) : null}
           </Nav>
           <Nav>
-            {/* <li className="nav-item" onClick={() => {salir()}}>
-              Salir
-            </li> */}
             {user ? (
               <NavDropdown
                 title={
