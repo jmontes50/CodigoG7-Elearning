@@ -3,9 +3,11 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom"
 import Badge from '@mui/material/Badge';
 import { FavoritosContext } from "../context/favoritosContext";
+import { AuthContext } from "../context/authContext";
 
 export default function BarNavigation() {
   const { favoritos } = useContext(FavoritosContext)
+  const { user, salir } = useContext(AuthContext)
 
   return (
     <Navbar bg="success" variant="dark">
@@ -25,6 +27,11 @@ export default function BarNavigation() {
               </Badge>
             </Link>
             
+          </Nav>
+          <Nav>
+            <li className="nav-item" onClick={() => {salir()}}>
+              Salir
+            </li>
           </Nav>
         </Navbar.Collapse>
       </Container>

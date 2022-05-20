@@ -1,5 +1,5 @@
 import { useState, useEffect, createContext } from "react";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth"; //para conectarnos a google
+import { GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "firebase/auth"; //para conectarnos a google
 import { auth } from "../config/firebaseConfig"; //instancia del módulo auth de firebase
 
 export const AuthContext = createContext();
@@ -18,7 +18,17 @@ export const AuthContextProvider = (props) => {
         }
     }
 
-    return <AuthContext.Provider value={{user, signInGoogle}}>
+    const salir = () => signOut(auth)
+
+    useEffect(() => {
+        return onAuthStateChanged(auth, (usuario) => {
+            //cuando el usuario esta logueado, me devuelve la info del usuario
+            //cuando no me da un null
+            setUser(usuario)
+        })
+    },[])
+
+    return <AuthContext.Provider value={{user, signInGoogle, salir}}>
         {props.children}
     </AuthContext.Provider>
 }
