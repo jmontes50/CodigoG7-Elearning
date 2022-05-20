@@ -1,9 +1,10 @@
 import { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { obtenerLugar } from "../services/lugarService";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 //para utilizar un context vamos a necesitar 2 cosas, useContext de React y el contexto en si
 import { FavoritosContext } from "../context/favoritosContext";
+import { AuthContext } from "../context/authContext"; 
 
 import TextField from "@mui/material/TextField";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
@@ -14,9 +15,20 @@ export default function DetalleLugarView() {
   const [miLugar, setMiLugar] = useState(null);
   const [fecha, setFecha] = useState(null);
 
+  const navigate = useNavigate()
+
   const { catId, lugId } = useParams();
 
   const { favoritos, anadirAFavoritos } = useContext(FavoritosContext);
+  const { user } = useContext(AuthContext)
+
+  const addAFavoritos = () => {
+    if(user){
+      anadirAFavoritos(miLugar)
+    }else{
+      navigate('/login')
+    }
+  }
 
   useEffect(() => {
     const getLugar = async () => {
@@ -42,9 +54,7 @@ export default function DetalleLugarView() {
             <h2>{miLugar.lug_nom}</h2>
             <button
               className="btn btn-outline-success"
-              onClick={() => {
-                anadirAFavoritos(miLugar);
-              }}
+              onClick={addAFavoritos}
             >
               Agregar a favoritos
             </button>
