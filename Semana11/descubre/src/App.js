@@ -6,6 +6,7 @@ import BarNavigation from "./components/BarNavigation"
 import HomeView from "./views/HomeView"
 import DetalleLugarView from "./views/DetalleLugarView"
 import FavoritosView from "./views/FavoritosView"
+import LoginView from "./views/LoginView"
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
               <Route path="/" element={<HomeView />} />
               <Route path="/detallelugar/:catId/:lugId" element={<DetalleLugarView />} />
               <Route path="/favoritos" element={<FavoritosView />} />
+              <Route path="/login" element={<LoginView />} />
             </Routes>
           </div>
         </FavoritosContextProvider>
