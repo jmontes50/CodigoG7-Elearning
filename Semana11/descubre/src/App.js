@@ -7,6 +7,7 @@ import HomeView from "./views/HomeView"
 import DetalleLugarView from "./views/DetalleLugarView"
 import FavoritosView from "./views/FavoritosView"
 import LoginView from "./views/LoginView"
+import ProtectedRoute from "./components/ProtectedRoute"
 
 export default function App() {
   return (
@@ -18,7 +19,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<HomeView />} />
               <Route path="/detallelugar/:catId/:lugId" element={<DetalleLugarView />} />
-              <Route path="/favoritos" element={<FavoritosView />} />
+              <Route path="/favoritos" element={<ProtectedRoute><FavoritosView /></ProtectedRoute>} />
               <Route path="/login" element={<LoginView />} />
             </Routes>
           </div>
