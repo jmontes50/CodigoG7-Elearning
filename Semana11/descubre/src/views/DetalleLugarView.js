@@ -86,7 +86,7 @@ export default function DetalleLugarView() {
                   </LocalizationProvider>
                  </div>
                   <div className="d-grid">
-                    <button className="btn btn-success mt-2">Reservar!</button>
+                    <button className="btn btn-success mt-2" disabled={!user ? true : false}>Reservar!</button>
                   </div>
                 </div>
               </div>
