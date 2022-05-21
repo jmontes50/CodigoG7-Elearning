@@ -10,3 +10,33 @@
 .img-detalle {
     object-fit: cover;
 }
+
+.card-categoria {
+    min-height:350px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-categoria .card-title{
+    text-decoration: none;
+    color:white;
+    font-size:40px;
+    position: absolute;
+    bottom:20px;
+}
+
+.filter-categoria{
+    background-image: linear-gradient(45deg, #198754, #000);
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    bottom:0;
+    opacity: 0.2;
+    transition: all 0.5s;
+}
+
+.card-categoria:hover .filter-categoria{
+    opacity: 0;
+}
