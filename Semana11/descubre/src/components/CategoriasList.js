@@ -29,12 +29,12 @@ export default function CategoriasList() {
   return (
     <div>
       <div className="row">
-        {misCategorias.map(({ cat_nom, cat_img }, i) => (
+        {misCategorias.map(({ cat_nom, cat_img, cat_id }, i) => (
           <div className="col-12 col-md-6" key={i}>
             <Link 
               className="card mb-3 card-categoria" 
               style={{backgroundImage:`url(${cat_img})`}}
-              to="/"
+              to={`/categoria/${cat_id}`}
             >
               <div className="filter-categoria" />
               <div className="card-body">
