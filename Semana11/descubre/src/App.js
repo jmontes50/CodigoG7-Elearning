@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css"
+import "./styles.css"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import FavoritosContextProvider from "./context/favoritosContext"
 import { AuthContextProvider } from "./context/authContext"
