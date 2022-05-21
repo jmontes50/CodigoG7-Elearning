@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import { obtenerCategoriaPorId } from "../services/categoriaService"
+import CategoriasMenu from "../components/CategoriasMenu"
 
 export default function CategoriaView() {
   const [categoria, setCategoria] = useState(null)
@@ -30,13 +31,13 @@ export default function CategoriaView() {
         {categoria.cat_nom}
       </h1>
       <div className="col-12 col-md-4">
-        Categorias y Filtros Temp
+        <CategoriasMenu />
       </div>
       <div className="col-12 col-md-8">
         <h4 className="mb-3">Lugares recomendados</h4>
         <div className="row">
           {categoria.lugares.map(({lug_nom, lug_dir, lug_desc, lug_img, lug_id, categoriaId}, i) => (
-            <div className="col-12 col-md-4" key={i}>
+            <div className="col-md-12 col-lg-4" key={i}>
               <div className="card mb-3">
                 <img src={lug_img} className="card-img-top" alt={lug_nom} />
                 <div className="card-body">

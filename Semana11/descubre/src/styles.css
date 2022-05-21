@@ -40,3 +40,9 @@
 .card-categoria:hover .filter-categoria{
     opacity: 0;
 }
+
+.menu-categorias a{
+    text-decoration: none;
+    color:black;
+    font-weight:bold;
+}
