@@ -61,8 +61,8 @@ export default function DetalleLugarView() {
           </div>
           <div className="row mt-4">
             <div className="col-12 col-lg-8">
-              <div className="img-fluid d-flex justify-content-center overflow-hidden">
-                <img src={miLugar.lug_img} alt={miLugar.lug_nom} />
+              <div className="img-fluid d-flex justify-content-center overflow-hidden div-img-detalle">
+                <img src={miLugar.lug_img} className="img-detalle" alt={miLugar.lug_nom} />
               </div>
             </div>
             <div className="col-12 col-lg-4">
