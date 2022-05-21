@@ -18,7 +18,7 @@ export default function CategoriaView() {
       }
     }
     getCategoria()
-  },[])
+  },[catId])
 
   if(!categoria) {
     //poner algo de carga, como mi estado de categoria es null, evitar tener errores al revisar propiedades como lug_nom

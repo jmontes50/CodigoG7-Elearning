@@ -15,7 +15,7 @@ export default function CategoriasMenu() {
       }
     }
     getCategorias()
-  })
+  }, [])
   return (
     <div>
       <h4 className="mb-3">
