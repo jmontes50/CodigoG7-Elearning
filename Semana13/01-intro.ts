@@ -14,3 +14,13 @@ let regalos:Array<string> = ["Flores","Chocolates","Osito","PS5"];
 
 let random:any = undefined //básicamente cualquier cosa
 
+//tsc nombre.ts
+//node nombre.js
+
+//funciones
+
+const sumar = (num1:number, num2:number):number => {
+    return num1 + num2
+}
+
+console.log(sumar(6, 10))

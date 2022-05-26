@@ -7,3 +7,10 @@ var cantidad = 21;
 var teQuiere = true;
 var regalos = ["Flores", "Chocolates", "Osito", "PS5"];
 var random = undefined; //básicamente cualquier cosa
+//tsc nombre.ts
+//node nombre.js
+//funciones
+var sumar = function (num1, num2) {
+    return num1 + num2;
+};
+console.log(sumar(6, 10));
