@@ -44,3 +44,6 @@ let Cangreburguer = new Anvorguesa(1, "CangreBurguer", 12)
 Cangreburguer.actualizarCosto = 20
 
 console.log(Cangreburguer)
+
+//Si desean cambiar la versión de Ecmascript al transpilar
+//tsc nombrearchivo.ts --target ES6
