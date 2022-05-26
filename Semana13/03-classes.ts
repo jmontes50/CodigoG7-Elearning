@@ -41,6 +41,6 @@ class Anvorguesa implements iHamburguesa{
 
 let Cangreburguer = new Anvorguesa(1, "CangreBurguer", 12)
 
-Cangreburguer.actualizarCosto(20)
+Cangreburguer.actualizarCosto = 20
 
 console.log(Cangreburguer)

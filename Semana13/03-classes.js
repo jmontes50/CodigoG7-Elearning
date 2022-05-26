@@ -1,5 +1,5 @@
-var Anvorguesa = /** @class */ (function () {
-    function Anvorguesa(id, nombre, precio) {
+class Anvorguesa {
+    constructor(id, nombre, precio) {
         this.id = id; //*
         this.nombre = nombre; //*
         this.precio = precio; //* obligatorio
@@ -7,27 +7,18 @@ var Anvorguesa = /** @class */ (function () {
         this.preparacion = "";
         this._costo = 90;
     }
-    Object.defineProperty(Anvorguesa.prototype, "obtenerCosto", {
-        //getters y setters t=> obtenedores y configuradores
-        //getters
-        get: function () {
-            //validaciones, codigo extra
-            return this._costo;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Anvorguesa.prototype, "actualizarCosto", {
-        //setter
-        set: function (nuevoCosto) {
-            //codigo extra
-            this._costo = nuevoCosto;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return Anvorguesa;
-}());
-var Cangreburguer = new Anvorguesa(1, "CangreBurguer", 12);
-Cangreburguer.actualizarCosto(20);
+    //getters y setters t=> obtenedores y configuradores
+    //getters
+    get obtenerCosto() {
+        //validaciones, codigo extra
+        return this._costo;
+    }
+    //setter
+    set actualizarCosto(nuevoCosto) {
+        //codigo extra
+        this._costo = nuevoCosto;
+    }
+}
+let Cangreburguer = new Anvorguesa(1, "CangreBurguer", 12);
+Cangreburguer.actualizarCosto = 20;
 console.log(Cangreburguer);
