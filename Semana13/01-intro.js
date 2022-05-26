@@ -11,6 +11,6 @@ var random = undefined; //básicamente cualquier cosa
 //node nombre.js
 //funciones
 var sumar = function (num1, num2) {
-    return num1 + num2;
+    return num1 + "";
 };
 console.log(sumar(6, 10));
