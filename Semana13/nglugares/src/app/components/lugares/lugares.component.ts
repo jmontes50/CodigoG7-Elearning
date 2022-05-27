@@ -9,7 +9,6 @@ import { Subscription } from 'rxjs'; //type, tipo
 })
 export class LugaresComponent implements OnInit {
   suscripcionLugares:Subscription
-
   //inyección por dependencias
   constructor(private _sLugares: LugaresService) { }
 
