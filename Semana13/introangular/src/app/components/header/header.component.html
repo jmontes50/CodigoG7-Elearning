@@ -26,6 +26,13 @@
 
 <!-- PropertyBinding []: va del .ts al .html -->
 <img [src]="url" alt="img">
+<hr>
+<!-- Two Way Data Binding - ngModel -->
+<input 
+    type="text"
+    placeholder="Ingrese el nuevo Hobbie"
+    [(ngModel)]="nuevoHobbie"
+>
 
 <!-- Event Binding () va del .html hacia el .ts-->
 <button (click)="agregarNuevoHobbie()">
