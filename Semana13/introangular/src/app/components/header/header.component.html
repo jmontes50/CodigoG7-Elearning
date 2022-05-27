@@ -23,3 +23,11 @@
 <ng-template #noMeQuiere>
     No me quiere entonces Party Hard 🥲🎉
 </ng-template>
+
+<!-- PropertyBinding []: va del .ts al .html -->
+<img [src]="url" alt="img">
+
+<!-- Event Binding () va del .html hacia el .ts-->
+<button (click)="agregarNuevoHobbie()">
+    Nuevo Hobbie!
+</button>

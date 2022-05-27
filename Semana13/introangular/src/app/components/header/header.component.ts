@@ -18,7 +18,15 @@ export class HeaderComponent implements OnInit {
 
   meQuiere:boolean = true
 
+  url:string = "https://picsum.photos/200/300"
+
+  nuevoHobbie:string = "Hacer Surf"
+
   constructor() { }
+
+  agregarNuevoHobbie() {
+    console.log(this.nuevoHobbie)
+  }
 
   ngOnInit(): void {
   }
