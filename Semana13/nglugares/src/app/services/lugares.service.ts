@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class LugaresService {
   url:string = "https://62729d5925fed8fcb5f724b1.mockapi.io/categorias"
 
-  //inyección por depencias, declarar algo como una propiedad más
+  //inyección por dependencias, declarar algo como una propiedad más
   // reemplazo const _Http = new HttpClient()
   constructor(private _Http: HttpClient) { }
 

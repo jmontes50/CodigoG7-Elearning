@@ -9,6 +9,7 @@ import { Subscription } from 'rxjs'; //type, tipo
 })
 export class LugaresComponent implements OnInit {
   suscripcionLugares:Subscription
+  lugares:Array<any>
   //inyección por dependencias
   constructor(private _sLugares: LugaresService) { }
 
@@ -16,12 +17,17 @@ export class LugaresComponent implements OnInit {
     // .subscribe(() => {exito}, () => {error})
     this.suscripcionLugares = this._sLugares.obtenerCategorias()
     .subscribe((datos) => {
-      console.log(datos)
+      const catFiltradas = datos.filter((cat:any) => cat.lugares.length > 0);
+      const arrLugares = catFiltradas.map((item:any) => item.lugares).flat();
+      this.lugares = arrLugares
+      console.log(this.lugares)
     })
   }
 
   ngOnInit(): void {
     //todo lo que sea consumo de servicios va a ir aquí
+    //useEffect, solamente ocurre en el montaje
+    this.getLugares()
   }
 
 }
