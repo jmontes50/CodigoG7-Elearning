@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  hobbies:Array<string> = [
+    "Tocar Guitarra",
+    "Probar comida",
+    "Cocinar",
+    "Jugar juegos de mesa",
+    "Videojuegos",
+    "Hacer deporte"
+  ]
+
+
   constructor() { }
 
   ngOnInit(): void {
