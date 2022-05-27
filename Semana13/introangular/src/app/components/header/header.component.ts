@@ -25,7 +25,8 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   agregarNuevoHobbie() {
-    console.log(this.nuevoHobbie)
+    // console.log(this.nuevoHobbie)
+    this.hobbies.push(this.nuevoHobbie)
   }
 
   ngOnInit(): void {
