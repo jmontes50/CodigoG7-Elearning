@@ -9,3 +9,17 @@
         {{activ}}
     </li>
 </ul>
+<div>
+    <p>Puedo ejecutar codigo de JS con doble llave</p>
+    {{100 + 50}}
+</div>
+
+<!-- ngIf -->
+<!-- renderizado condicional -->
+<div *ngIf="meQuiere else noMeQuiere">
+    Les deseo lo mejor 😊
+</div>
+<!-- comodin -->
+<ng-template #noMeQuiere>
+    No me quiere entonces Party Hard 🥲🎉
+</ng-template>

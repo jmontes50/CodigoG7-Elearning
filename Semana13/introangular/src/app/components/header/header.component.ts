@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
     "Hacer deporte"
   ]
 
+  meQuiere:boolean = true
 
   constructor() { }
 
