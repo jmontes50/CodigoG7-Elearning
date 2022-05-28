@@ -17,10 +17,11 @@ export class LugaresComponent implements OnInit {
     // .subscribe(() => {exito}, () => {error})
     this.suscripcionLugares = this._sLugares.obtenerCategorias()
     .subscribe((datos) => {
+      //mismo tratamiento que en react para obtener los lugares
       const catFiltradas = datos.filter((cat:any) => cat.lugares.length > 0);
       const arrLugares = catFiltradas.map((item:any) => item.lugares).flat();
       this.lugares = arrLugares
-      console.log(this.lugares)
+      // console.log(this.lugares)
     })
   }
 
