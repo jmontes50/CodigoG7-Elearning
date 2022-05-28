@@ -24,4 +24,8 @@ export class LugaresService {
     //https://62729d5925fed8fcb5f724b1.mockapi.io/categorias/1/lugares
     return this._Http.post(`${this.url}/categorias/${nuevoLugar.categoriaId}/lugares`, nuevoLugar)
   }
+
+  obtenerLugarPorId(catId:string, lugId:string): Observable<any> {
+    return this._Http.get(`${this.url}/categorias/${catId}/lugares/${lugId}`)
+  }
 }
