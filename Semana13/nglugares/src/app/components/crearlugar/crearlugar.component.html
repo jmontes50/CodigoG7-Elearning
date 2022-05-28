@@ -1,1 +1,32 @@
-<p>crearlugar works!</p>
+<h3 class="my-3">
+    Crear Lugar
+</h3>
+<form>
+    <div class="mb-3">
+        <label class="form-label">Nombre:</label>
+        <input
+            type="text"
+            class="form-control"
+            placeholder="Ej. Tanta"
+            [(ngModal)]="nuevoLugar.lug_nom"
+        >
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Descripción:</label>
+        <input
+            type="text"
+            class="form-control"
+            placeholder="Ej. Tanta es un restaurante creado por Gastón Acurio"
+            [(ngModal)]="nuevoLugar.lug_desc"
+        >
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Dirección:</label>
+        <input
+            type="text"
+            class="form-control"
+            placeholder="Ej. Av. Salaverry 200"
+            [(ngModal)]="nuevoLugar.lug_dir"
+        >
+    </div>
+</form>
