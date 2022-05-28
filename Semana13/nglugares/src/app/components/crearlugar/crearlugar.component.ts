@@ -18,9 +18,19 @@ export class CrearlugarComponent implements OnInit {
     categoriaId:1
   }
 
+  categorias:Array<any> = []
+
   constructor(private _sLugar: LugaresService) { }
 
   ngOnInit(): void {
+    this.manejarObtenerCategorias()
+  }
+
+  manejarObtenerCategorias(){
+    this._sLugar.obtenerCategorias()
+    .subscribe((cats) => {
+      this.categorias = cats
+    })
   }
 
   manejarCrearLugar(){

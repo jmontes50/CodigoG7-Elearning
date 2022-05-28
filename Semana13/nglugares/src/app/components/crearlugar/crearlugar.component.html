@@ -62,6 +62,14 @@
             name="longitud"
         >
     </div>
+    <div class="mb-3">
+        <label class="form-label">Categoria:</label>
+        <select class="form-select" [(ngModel)]="nuevoLugar.categoriaId" name="categoria">
+            <option *ngFor="let cat of categorias" [value]="cat.cat_id">
+                {{cat.cat_nom}}
+            </option>
+        </select>
+    </div>
     <button (click)="manejarCrearLugar()" class="btn btn-primary">
         Guardar
     </button>
