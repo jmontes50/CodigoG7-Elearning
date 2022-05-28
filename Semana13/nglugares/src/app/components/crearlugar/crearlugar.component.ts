@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import iLugar from '../../interfaces/iLugar';
 import { LugaresService } from '../../services/lugares.service';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-crearlugar',
@@ -20,7 +22,7 @@ export class CrearlugarComponent implements OnInit {
 
   categorias:Array<any> = []
 
-  constructor(private _sLugar: LugaresService) { }
+  constructor(private _sLugar: LugaresService, private router: Router) { }
 
   ngOnInit(): void {
     this.manejarObtenerCategorias()
@@ -37,7 +39,13 @@ export class CrearlugarComponent implements OnInit {
     this._sLugar.crearNuevoLugar(this.nuevoLugar)
     // .subscribe(() => {exito}, (error)=>{error})
     .subscribe(() => {
-      console.log("Lugar Creado!")
+      // console.log("Lugar Creado!")
+      Swal.fire({
+        icon:"success",
+        title:"Lugar Creado"
+      }).then(() => {
+        this.router.navigate([""])
+      })
     }, (error) => {
       console.log({error})
     })
