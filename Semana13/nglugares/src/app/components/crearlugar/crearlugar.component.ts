@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import iLugar from '../../interfaces/iLugar';
+import { LugaresService } from '../../services/lugares.service';
 
 @Component({
   selector: 'app-crearlugar',
@@ -17,13 +18,19 @@ export class CrearlugarComponent implements OnInit {
     categoriaId:1
   }
 
-  constructor() { }
+  constructor(private _sLugar: LugaresService) { }
 
   ngOnInit(): void {
   }
 
   manejarCrearLugar(){
-    console.log("Crear!", this.nuevoLugar)
+    this._sLugar.crearNuevoLugar(this.nuevoLugar)
+    // .subscribe(() => {exito}, (error)=>{error})
+    .subscribe(() => {
+      console.log("Lugar Creado!")
+    }, (error) => {
+      console.log({error})
+    })
   }
 
 }

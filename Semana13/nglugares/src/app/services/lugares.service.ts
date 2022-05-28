@@ -21,6 +21,7 @@ export class LugaresService {
   }
 
   crearNuevoLugar(nuevoLugar:iLugar):Observable<any> {
-    return this._Http.post(`${this.url}/lugares`, nuevoLugar)
+    //https://62729d5925fed8fcb5f724b1.mockapi.io/categorias/1/lugares
+    return this._Http.post(`${this.url}/categorias/${nuevoLugar.categoriaId}/lugares`, nuevoLugar)
   }
 }
