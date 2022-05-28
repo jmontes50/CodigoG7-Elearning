@@ -8,4 +8,12 @@
             {{lug.lug_desc}}
         </p>
     </div>
+    <div class="card-footer">
+        <div class="d-grid">
+            <!-- http://localhost:4200/editarlugar/2/17 -->
+            <a class="btn btn-primary" [routerLink]="['editarlugar',lug.categoriaId,lug.lug_id]">
+                Editar
+            </a>
+        </div>
+    </div>
 </div>
