@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { LugaresComponent } from './components/lugares/lugares.component';
 import { LugarComponent } from './components/lugar/lugar.component';
 import { CrearlugarComponent } from './components/crearlugar/crearlugar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LugaresComponent,
     LugarComponent,
-    CrearlugarComponent
+    CrearlugarComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
