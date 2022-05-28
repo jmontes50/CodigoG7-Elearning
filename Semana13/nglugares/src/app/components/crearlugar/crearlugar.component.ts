@@ -22,4 +22,8 @@ export class CrearlugarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  manejarCrearLugar(){
+    console.log("Crear!", this.nuevoLugar)
+  }
+
 }

@@ -9,6 +9,7 @@
             class="form-control"
             placeholder="Ej. Tanta"
             [(ngModel)]="nuevoLugar.lug_nom"
+            name="nombre"
         >
     </div>
     <div class="mb-3">
@@ -18,6 +19,7 @@
             class="form-control"
             placeholder="Ej. Tanta es un restaurante creado por Gastón Acurio"
             [(ngModel)]="nuevoLugar.lug_desc"
+            name="descripción"
         >
     </div>
     <div class="mb-3">
@@ -27,6 +29,40 @@
             class="form-control"
             placeholder="Ej. Av. Salaverry 200"
             [(ngModel)]="nuevoLugar.lug_dir"
+            name="direccion"
         >
     </div>
+    <div class="mb-3">
+        <label class="form-label">Foto url:</label>
+        <input
+            type="text"
+            class="form-control"
+            placeholder="Ej. Picsum"
+            [(ngModel)]="nuevoLugar.lug_img"
+            name="url"
+        >
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Latitud:</label>
+        <input
+            type="number"
+            class="form-control"
+            placeholder="Ej. -17"
+            [(ngModel)]="nuevoLugar.lug_coords[0]"
+            name="latitud"
+        >
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Longitud:</label>
+        <input
+            type="number"
+            class="form-control"
+            placeholder="Ej. -72"
+            [(ngModel)]="nuevoLugar.lug_coords[1]"
+            name="longitud"
+        >
+    </div>
+    <button (click)="manejarCrearLugar()" class="btn btn-primary">
+        Guardar
+    </button>
 </form>
